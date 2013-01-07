@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vectra.start", "Vectra.start.csproj", "{74027C52-E1C9-4682-91FA-76D3667E5B24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vectra.ar", "..\vectra.ar\vectra.ar.csproj", "{F47E27AE-A86F-4EF2-BC21-243545535437}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vectra.ap", "..\vectra.ap\vectra.ap.csproj", "{A0392C48-74E7-4664-AC36-D1098C9A048E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vectra.gl", "..\vectra.gl\vectra.gl.csproj", "{B277D037-F6E2-44E9-84E0-060AAF1B40A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74027C52-E1C9-4682-91FA-76D3667E5B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74027C52-E1C9-4682-91FA-76D3667E5B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74027C52-E1C9-4682-91FA-76D3667E5B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74027C52-E1C9-4682-91FA-76D3667E5B24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F47E27AE-A86F-4EF2-BC21-243545535437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F47E27AE-A86F-4EF2-BC21-243545535437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F47E27AE-A86F-4EF2-BC21-243545535437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F47E27AE-A86F-4EF2-BC21-243545535437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0392C48-74E7-4664-AC36-D1098C9A048E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0392C48-74E7-4664-AC36-D1098C9A048E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0392C48-74E7-4664-AC36-D1098C9A048E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0392C48-74E7-4664-AC36-D1098C9A048E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B277D037-F6E2-44E9-84E0-060AAF1B40A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B277D037-F6E2-44E9-84E0-060AAF1B40A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B277D037-F6E2-44E9-84E0-060AAF1B40A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B277D037-F6E2-44E9-84E0-060AAF1B40A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

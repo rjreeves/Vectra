@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vectra.ar", "Vectra\Vectra.ar.csproj", "{3E2C53AB-2F40-434A-A6C8-4CE4EF955A16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vectra.DBA", "Vectra.DBA\Vectra.DBA.csproj", "{511A4ACA-B20A-4862-9409-FBF8F1F61F02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vectra.Update", "Vectra.Update\Vectra.Update.csproj", "{1A6DA3A4-363D-4B8D-B3EB-B78330190D00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E2C53AB-2F40-434A-A6C8-4CE4EF955A16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E2C53AB-2F40-434A-A6C8-4CE4EF955A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E2C53AB-2F40-434A-A6C8-4CE4EF955A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E2C53AB-2F40-434A-A6C8-4CE4EF955A16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{511A4ACA-B20A-4862-9409-FBF8F1F61F02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{511A4ACA-B20A-4862-9409-FBF8F1F61F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{511A4ACA-B20A-4862-9409-FBF8F1F61F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{511A4ACA-B20A-4862-9409-FBF8F1F61F02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A6DA3A4-363D-4B8D-B3EB-B78330190D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A6DA3A4-363D-4B8D-B3EB-B78330190D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A6DA3A4-363D-4B8D-B3EB-B78330190D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A6DA3A4-363D-4B8D-B3EB-B78330190D00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\vectra.1\vectra.ap\bin\Release\vectra.ap.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\vectra.1\vectra.ap\bin\Release\vectra.ap.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\vectra.1\vectra.ap\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\vectra.1\vectra.ap\obj\Release\vectra.ap.Properties.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\vectra.1\vectra.ap\obj\Release\vectra.ap.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\vectra.1\vectra.ap\obj\Release\vectra.ap.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\vectra.1\vectra.ap\obj\Release\vectra.ap.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.ap\bin\Release\vectra.ap.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.ap\bin\Release\vectra.ap.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.ap\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.ap\obj\Release\vectra.ap.ap.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.ap\obj\Release\vectra.ap.Properties.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.ap\obj\Release\vectra.ap.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.ap\obj\Release\vectra.ap.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.ap\obj\Release\vectra.ap.pdb

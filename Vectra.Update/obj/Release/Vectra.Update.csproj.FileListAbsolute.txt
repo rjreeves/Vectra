@@ -1,0 +1,8 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.Update\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.Update\obj\Release\Vectra.Update.Form1.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.Update\obj\Release\Vectra.Update.Properties.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.Update\obj\Release\Vectra.Update.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.Update\bin\Release\Vectra.Update.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.Update\bin\Release\Vectra.Update.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.Update\obj\Release\Vectra.Update.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.Update\obj\Release\Vectra.Update.pdb

@@ -1,0 +1,14 @@
+SqlConnection cnn ;
+string connectionString = null;
+string sql = null;
+connectionString = "data source=SERVER NAME;initial catalog=crystaldb;user id=USER NAME;password=PASSWORD;";
+cnn = new SqlConnection(connectionString);
+cnn.Open();
+sql = procesSQL();
+SqlDataAdapter dscmd = new SqlDataAdapter(sql, cnn);
+DataSet1 ds = new DataSet1();
+dscmd.Fill(ds, "Product");
+objRpt.SetDataSource(ds.Tables[1]);
+crystalReportViewer1.ReportSource = objRpt;
+crystalReportViewer1.Refresh();
+

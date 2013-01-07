@@ -1,0 +1,65 @@
+Passing Multiple Parameters to a Crystal Report Programmatically
+
+Passing a parameter to a Crystal Report is easy; all you need to do is drop a ready-made parameter field 
+from the Field Explorer to your report and when the report is loaded, the user is asked for the 
+parameter's value automatically.
+
+Passing multiple parameter values to a report programmatically is a bit trickier.
+First, you have to use the correct parameter type. In the Field Explorer, 
+add a new parameter and make sure that Allow multiple values and Discrete value(s) are selected. 
+Next, drag the parameter from the Field Explorer on your report. 
+Then open the Select Expert (right-click your report and choose Report | Select Expert...), 
+double-click the field you're setting the parameter for (Country in this example), 
+choose is equal to from the first drop-down, choose your parameter (?Country) from the second drop-down and 
+click OK.
+
+The next step is to add the code that passes the values for the parameters at run-time. 
+he example below uses hard-coded values for a parameter that filters the report based on the country name, 
+but in reality you can substitute these hard-coded values with any values you like. 
+For example, you can retrieve them from a database, a user preference stored in the registry, 
+or retrieve them from text boxes placed on a Windows form. 
+Just make sure that the ParameterFieldName matches the name 
+of the parameter in the Field Explorer (minus the question mark).
+Don't forget to import the CrystalDecisions.Shared  (1)namespace.
+
+Add the following code to the click handler of a button, the load handler of a form,
+ or any other method that is applicable in your situation:
+
+
+
+
+
+
+private void ParamButton_Click(object sender, System.EventArgs e)
+{
+
+	// Create parameter objects
+  ParameterFields myParams = new ParameterFields();
+  ParameterField myParam = new ParameterField();
+  ParameterDiscreteValue myDiscreteValue = new ParameterDiscreteValue();
+
+  // Set the ParameterFieldName to the name of the parameter
+  // created in the Field Explorer
+  myParam.ParameterFieldName = "Country";
+			
+  // Add first country
+  myDiscreteValue.Value = "USA";
+  myParam.CurrentValues.Add(myDiscreteValue);
+			
+  // Reuse myDiscreteValue, and assign second country
+  myDiscreteValue = new ParameterDiscreteValue();
+  myDiscreteValue.Value = "Netherlands";
+  myParam.CurrentValues.Add(myDiscreteValue);
+				
+  // Add param object to params collection
+  myParams.Add(myParam);
+		
+  // Assign the params collection to the report viewer
+  myCrystalReportViewer.ParameterFieldInfo = myParams;
+		
+  // Assign the Report to the report viewer.
+  // This method uses a strongly typed report,
+  // but other methods are possible as well.
+  myCrystalReportViewer.ReportSource = MyReportObject;
+
+	}

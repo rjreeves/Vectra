@@ -1,0 +1,16 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\vectra.1\vectra.gl\bin\Debug\vectra.gl.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\vectra.1\vectra.gl\bin\Debug\vectra.gl.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\vectra.1\vectra.gl\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\vectra.1\vectra.gl\obj\Debug\vectra.gl.gl.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\vectra.1\vectra.gl\obj\Debug\vectra.gl.Properties.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\vectra.1\vectra.gl\obj\Debug\vectra.gl.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\vectra.1\vectra.gl\obj\Debug\vectra.gl.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\vectra.1\vectra.gl\obj\Debug\vectra.gl.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.gl\bin\Debug\vectra.gl.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.gl\bin\Debug\vectra.gl.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.gl\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.gl\obj\Debug\vectra.gl.gl.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.gl\obj\Debug\vectra.gl.Properties.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.gl\obj\Debug\vectra.gl.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.gl\obj\Debug\vectra.gl.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.start\vectra.gl\obj\Debug\vectra.gl.pdb

@@ -1,0 +1,7 @@
+alter table configuration add column StatementDate type text
+alter table customer_trans add column t_finished type integer default=0
+
+Add the salessummary(,1) to views
+
+migration data.
+

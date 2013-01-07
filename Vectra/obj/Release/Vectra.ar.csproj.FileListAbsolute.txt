@@ -1,0 +1,130 @@
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\Vectra.ar.exe.config
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.ar.exe
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.ar.pdb
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.AboutBox1.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.AccountingPeriod.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.AdjustmentEdit.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Adjustments.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.ATBReportForm.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Configuration.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.CustomerReportForm.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.EndOfWeek.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.InvoiceEdit.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.CustomerEdit.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.CustomerInterface.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Debtors.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Frame.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Home.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.InvoiceNew.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Orders.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.prodTypes.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.ProductReportForm.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Products.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Properties.Resources.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Receipts.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.SalesSummaryReportForm.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.StatementReportForm.resources
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.ar.csproj.GenerateResource.Cache
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\Vectra.ar.exe
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\Vectra.ar.pdb
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\ZedGraph.xml
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\Devart.Data.dll
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\Devart.Data.xml
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\Devart.Data.SQLite.dll
+C:\Documents and Settings\rjreeves\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\Devart.Data.SQLite.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\Vectra.ar.exe.config
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\Vectra.ar.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\Vectra.ar.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\Devart.Data.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\Devart.Data.SQLite.Design.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\Devart.Data.SQLite.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\ZedGraph.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\ZedGraph.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\Devart.Data.SQLite.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\bin\Release\Devart.Data.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.AboutBox1.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.AccountingPeriod.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.AdjustmentEdit.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Adjustments.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.ATBReportForm.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.BetterDialog.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Configuration.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.CurrentTransaction.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.CustomerReportForm.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.CustomerTransactionReportForm.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.dbase.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.EndOfWeek.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.ExceptionForm.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.InvoiceEdit.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.CustomerEdit.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.CustomerInterface.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Debtors.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Frame.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Home.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.InvoiceNew.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Backup.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.ReceiptAndAdjReportForm.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.ReceiptEdit.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Receipts.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Orders.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.prodTypes.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.ProductReportForm.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Products.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Properties.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.SalesProdReportForm.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.SalesSummaryReportForm.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.StatementReportForm.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.Test.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.ar.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.ar.exe.licenses
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.ar.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Release\Vectra.ar.pdb
+C:\Users\rreeves\Desktop\Vectra\Vectra\bin\Release\Vectra.ar.exe.config
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.ar.exe
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.ar.pdb
+C:\Users\rreeves\Desktop\Vectra\Vectra\bin\Release\Vectra.ar.exe
+C:\Users\rreeves\Desktop\Vectra\Vectra\bin\Release\Vectra.ar.pdb
+C:\Users\rreeves\Desktop\Vectra\Vectra\bin\Release\Devart.Data.dll
+C:\Users\rreeves\Desktop\Vectra\Vectra\bin\Release\Devart.Data.SQLite.Design.dll
+C:\Users\rreeves\Desktop\Vectra\Vectra\bin\Release\Devart.Data.SQLite.dll
+C:\Users\rreeves\Desktop\Vectra\Vectra\bin\Release\Devart.Data.xml
+C:\Users\rreeves\Desktop\Vectra\Vectra\bin\Release\Devart.Data.SQLite.xml
+C:\Users\rreeves\Desktop\Vectra\Vectra\bin\Release\ZedGraph.xml
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.ar.csprojResolveAssemblyReference.cache
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.AboutBox1.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.AccountingPeriod.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.AdjustmentEdit.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.Adjustments.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.ATBReportForm.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.BetterDialog.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.Configuration.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.CurrentTransaction.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.CustomerReportForm.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.CustomerTransactionReportForm.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.dbase.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.EndOfWeek.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.ExceptionForm.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.InvoiceEdit.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.CustomerEdit.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.CustomerInterface.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.Debtors.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.Frame.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.Home.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.InvoiceNew.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.Backup.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.ReceiptAndAdjReportForm.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.ReceiptEdit.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.Receipts.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.Orders.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.prodTypes.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.ProductReportForm.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.Products.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.Properties.Resources.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.SalesProdReportForm.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.SalesSummaryReportForm.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.StatementReportForm.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.Test.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.ar.csproj.GenerateResource.Cache
+C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.ar.exe.licenses

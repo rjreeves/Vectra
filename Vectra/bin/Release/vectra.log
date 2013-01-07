@@ -1,0 +1,198 @@
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Connect: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Select acnt_period from configuration
+Execute: Select acnt_period from configuration
+Prepare: select t_date from acnt_period a, configuration b 
+                                           where b.acnt_period = a.t_week_id 
+                                           and t_Day_of_week = 6;
+Execute: select t_date from acnt_period a, configuration b 
+                                           where b.acnt_period = a.t_week_id 
+                                           and t_Day_of_week = 6;
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Connect: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Select count(*) from customer
+Execute: Select count(*) from customer
+Prepare: select count(*), sum(t_unpaid) from customer_trans where (t_type = 'Invoice') and (t_unpaid > 0)
+Execute: select count(*), sum(t_unpaid) from customer_trans where (t_type = 'Invoice') and (t_unpaid > 0)
+Prepare: Select sum(t_amount )from customer_trans where (t_type = 'Payment')
+Execute: Select sum(t_amount )from customer_trans where (t_type = 'Payment')
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Select sum(t_amount )from customer_trans where (t_type = 'Invoice')
+Execute: Select sum(t_amount )from customer_trans where (t_type = 'Invoice')
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Connect: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT bus_names, bus_addr1, bus_addr2, bus_post_code, bus_phone, gl_sales, gl_sales_gst, gl_bank, gl_adj, gl_disc, StatementDate FROM configuration
+Execute: SELECT bus_names, bus_addr1, bus_addr2, bus_post_code, bus_phone, gl_sales, gl_sales_gst, gl_bank, gl_adj, gl_disc, StatementDate FROM configuration
+Close connection
+Prepare: 
+                        select acnt.t_week_of_year, 
+                        sum(case when t_type = 'Invoice' then t_amount else 0 end) as invoice_amt,
+                        sum(case when t_type = 'Payment' then t_amount else 0 end) as payment_amt
+                        from customer_trans tran, acnt_period acnt
+                        where t_type in ('Invoice', 'Payment')
+                        and acnt.t_date = substr(tran.t_date,1,10)
+                        group by acnt.t_date
+Execute: 
+                        select acnt.t_week_of_year, 
+                        sum(case when t_type = 'Invoice' then t_amount else 0 end) as invoice_amt,
+                        sum(case when t_type = 'Payment' then t_amount else 0 end) as payment_amt
+                        from customer_trans tran, acnt_period acnt
+                        where t_type in ('Invoice', 'Payment')
+                        and acnt.t_date = substr(tran.t_date,1,10)
+                        group by acnt.t_date
+Prepare: Select acnt_period from configuration
+Execute: Select acnt_period from configuration
+Prepare: Select acnt_period from configuration
+Execute: Select acnt_period from configuration
+Prepare: select t_week_id from acnt_period 
+                    where date('now','localtime') = t_date;
+Execute: select t_week_id from acnt_period 
+                    where date('now','localtime') = t_date;
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Select acnt_period, StatementDate from configuration
+Execute: Select acnt_period, StatementDate from configuration
+Prepare: select t_date from acnt_period a 
+                                           where a.t_week_id = '201244'
+                                           and t_Day_of_week = 6;
+Execute: select t_date from acnt_period a 
+                                           where a.t_week_id = '201244'
+                                           and t_Day_of_week = 6;
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: select t_week_id from acnt_period where t_date = date('now','localtime')
+Execute: select t_week_id from acnt_period where t_date = date('now','localtime')
+Prepare: select t_date from acnt_period a 
+                                           where a.t_week_id = '201301'
+                                           and t_Day_of_week = 6;
+Execute: select t_date from acnt_period a 
+                                           where a.t_week_id = '201301'
+                                           and t_Day_of_week = 6;
+Prepare: update configuration 
+                    set acnt_period = (select t_week_id from acnt_period where t_date = date('now','localtime'))
+Execute: update configuration 
+                    set acnt_period = (select t_week_id from acnt_period where t_date = date('now','localtime'))
+Prepare: Select acnt_period, StatementDate from configuration
+Execute: Select acnt_period, StatementDate from configuration
+Prepare: select t_date from acnt_period a 
+                                           where a.t_week_id = '201301'
+                                           and t_Day_of_week = 6;
+Execute: select t_date from acnt_period a 
+                                           where a.t_week_id = '201301'
+                                           and t_Day_of_week = 6;
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: select t_week_id from acnt_period where t_date = date('now','localtime')
+Execute: select t_week_id from acnt_period where t_date = date('now','localtime')
+Prepare: select t_date from acnt_period a 
+                                           where a.t_week_id = '201301'
+                                           and t_Day_of_week = 6;
+Execute: select t_date from acnt_period a 
+                                           where a.t_week_id = '201301'
+                                           and t_Day_of_week = 6;
+Prepare: Select acnt_period from configuration
+Execute: Select acnt_period from configuration
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Connect: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     cust_id, name_address_1, name_address_2, name_address_3, name_address_4, pcode, phone, contact_name, abn, credit_rating, notes, dunning, 
+                      avg_payment, open_bal
+FROM         customer
+ORDER BY name_address_1
+Execute: SELECT     cust_id, name_address_1, name_address_2, name_address_3, name_address_4, pcode, phone, contact_name, abn, credit_rating, notes, dunning, 
+                      avg_payment, open_bal
+FROM         customer
+ORDER BY name_address_1
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT cust_id, curAmt, days7, days14, days21, Owing, open_bal FROM debtors_summary
+Execute: SELECT cust_id, curAmt, days7, days14, days21, Owing, open_bal FROM debtors_summary
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     recpt_number, amount, recpt_date, invoice_number, cust_id, invoice_key
+FROM         INVOICE_RECIEPTS
+Execute: SELECT     recpt_number, amount, recpt_date, invoice_number, cust_id, invoice_key
+FROM         INVOICE_RECIEPTS
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Execute: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     cust_id, name_address_1, name_address_2, name_address_3, name_address_4, pcode, phone, contact_name, abn, credit_rating, notes, dunning, 
+                      avg_payment, open_bal
+FROM         customer
+ORDER BY name_address_1
+Execute: SELECT     cust_id, name_address_1, name_address_2, name_address_3, name_address_4, pcode, phone, contact_name, abn, credit_rating, notes, dunning, 
+                      avg_payment, open_bal
+FROM         customer
+ORDER BY name_address_1
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT type_id, "desc" FROM "main".product_type
+Execute: SELECT type_id, "desc" FROM "main".product_type
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT prod_id, "desc", percent_carcass, type_id, gst FROM "main".products
+Execute: SELECT prod_id, "desc", percent_carcass, type_id, gst FROM "main".products
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT invoice_number, line_number, prod_id, qty, weight, rate, gst_value, amount, qty_rate FROM invoice_items
+Execute: SELECT invoice_number, line_number, prod_id, qty, weight, rate, gst_value, amount, qty_rate FROM invoice_items
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     cust_id, name_address_1, name_address_2, name_address_3, name_address_4, pcode, phone, contact_name, abn, credit_rating, notes, dunning, 
+                      avg_payment, open_bal
+FROM         customer
+ORDER BY name_address_1
+Execute: SELECT     cust_id, name_address_1, name_address_2, name_address_3, name_address_4, pcode, phone, contact_name, abn, credit_rating, notes, dunning, 
+                      avg_payment, open_bal
+FROM         customer
+ORDER BY name_address_1
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Execute: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Execute: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Close connection

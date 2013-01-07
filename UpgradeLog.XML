@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Vectra.ar">
+</Property><Property Name="Solution File" Value="C:\Users\rreeves\Desktop\Vectra\Vectra.ar.sln">
+</Property><Property Name="Date" Value="Monday, 7 January 2013">
+</Property><Property Name="Time" Value="8:57 AM">
+</Property></Properties><Event ErrorLevel="4" Project="Vectra.ar" Source="http://go.microsoft.com/fwlink/?LinkId=159919" Description="Warning: this project requires Crystal Reports, which is no longer included with Visual Studio. Please click here for more information.">
+</Event><Event ErrorLevel="0" Project="Vectra.ar" Source="Vectra\Vectra.ar.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Vectra.ar" Source="Vectra\Vectra.ar.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Vectra.DBA" Source="Vectra.DBA\Vectra.DBA.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Vectra.DBA" Source="Vectra.DBA\Vectra.DBA.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Vectra.Update" Source="Vectra.Update\Vectra.Update.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Vectra.Update" Source="Vectra.Update\Vectra.Update.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Vectra.ar.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="Vectra.ar.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Vectra.ar" Source="Vectra\Vectra.ar.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="Vectra.DBA" Source="Vectra.DBA\Vectra.DBA.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

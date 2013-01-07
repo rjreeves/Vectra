@@ -1,0 +1,22 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.DBA\bin\Release\Vectra.DBA.exe.config
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.DBA\bin\Release\Vectra.DBA.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.DBA\bin\Release\Vectra.DBA.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.DBA\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.Invoicing.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.Main.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.Properties.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.Receipts.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.pdb
+C:\Users\rreeves\Desktop\Vectra\Vectra.DBA\bin\Release\Vectra.DBA.exe.config
+C:\Users\rreeves\Desktop\Vectra\Vectra.DBA\bin\Release\Vectra.DBA.exe
+C:\Users\rreeves\Desktop\Vectra\Vectra.DBA\bin\Release\Vectra.DBA.pdb
+C:\Users\rreeves\Desktop\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.csprojResolveAssemblyReference.cache
+C:\Users\rreeves\Desktop\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.Invoicing.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.Main.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.Properties.Resources.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.Receipts.resources
+C:\Users\rreeves\Desktop\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.csproj.GenerateResource.Cache
+C:\Users\rreeves\Desktop\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.exe
+C:\Users\rreeves\Desktop\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.pdb
