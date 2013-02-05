@@ -66,6 +66,8 @@ namespace Vectra
             t_dateDateTimePicker.Text = DateTime.Now.ToShortDateString();
             t_timestampDateTimePicker.Text = DateTime.Now.ToShortDateString();
             t_amountTextBox.Text = "0";
+
+            this.sqLiteConnection1.ConnectionString = da.Connection.ConnectionString;
                         
         }
 

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Vectra.DBA.DataSet1TableAdapters;
 
 namespace Vectra.DBA
 {
@@ -18,7 +19,9 @@ namespace Vectra.DBA
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            Vectra.DBA.DataSet1TableAdapters.customer_transTableAdapter ta = new customer_transTableAdapter();
+            this.toolStripStatusLabel1.Text = ta.Connection.ConnectionString.ToString();
+            this.conn.ConnectionString = ta.Connection.ConnectionString;
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

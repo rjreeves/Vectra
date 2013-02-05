@@ -31,7 +31,8 @@ namespace Vectra
         }
 
         private void Home_Load(object sender, EventArgs e)
-        {
+        {            
+
             this.sqLiteConnection1.ConnectionString = myConfig.connstr;
             CustomerStats c = new CustomerStats(this.sqLiteConnection1.ConnectionString.ToString());
             try

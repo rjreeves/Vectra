@@ -39,10 +39,10 @@
             System.Windows.Forms.Label t_amountLabel;
             System.Windows.Forms.Label t_src_idLabel;
             System.Windows.Forms.Label name_address_1Label;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.t_idTextBox = new System.Windows.Forms.TextBox();
             this.customer_transBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet2 = new Vectra.DataSet2();
@@ -58,6 +58,15 @@
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cust_idTextBox = new System.Windows.Forms.TextBox();
             this.iNVOICE_HEADERDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unpaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recent_payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iNVOICE_HEADERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iNVOICE_RECIEPTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnApply = new System.Windows.Forms.Button();
@@ -72,15 +81,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnSubTotal = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unpaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.recent_payment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             t_idLabel = new System.Windows.Forms.Label();
             t_typeLabel = new System.Windows.Forms.Label();
             t_cust_idLabel = new System.Windows.Forms.Label();
@@ -338,8 +338,84 @@
             this.iNVOICE_HEADERDataGridView.Size = new System.Drawing.Size(906, 220);
             this.iNVOICE_HEADERDataGridView.TabIndex = 4;
             this.iNVOICE_HEADERDataGridView.TabStop = false;
-            this.iNVOICE_HEADERDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.iNVOICE_HEADERDataGridView_CellFormatting);
             this.iNVOICE_HEADERDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.iNVOICE_HEADERDataGridView_CellClick);
+            this.iNVOICE_HEADERDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.iNVOICE_HEADERDataGridView_CellFormatting);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "invoice_number";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.NullValue = null;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Invoice Number";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "invoice_date";
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Invoice Date";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "cust_id";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Customer";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "docket_number";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Docket Number";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "notes";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Notes";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "text_fully_paid";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Fully Paid";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "invoice_amount";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Invoice Amount";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // unpaid
+            // 
+            this.unpaid.DataPropertyName = "invoice_unpaid";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.unpaid.DefaultCellStyle = dataGridViewCellStyle4;
+            this.unpaid.HeaderText = "Invoice Unpaid";
+            this.unpaid.Name = "unpaid";
+            this.unpaid.ReadOnly = true;
+            // 
+            // recent_payment
+            // 
+            this.recent_payment.DataPropertyName = "recent_payment";
+            this.recent_payment.HeaderText = "Allocation";
+            this.recent_payment.Name = "recent_payment";
             // 
             // iNVOICE_HEADERBindingSource
             // 
@@ -456,82 +532,6 @@
             this.btnSubTotal.Text = "Sub Total";
             this.btnSubTotal.UseVisualStyleBackColor = true;
             this.btnSubTotal.Click += new System.EventHandler(this.btnSubTotal_Click);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "invoice_number";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.NullValue = null;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Invoice Number";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "invoice_date";
-            dataGridViewCellStyle10.Format = "d";
-            dataGridViewCellStyle10.NullValue = null;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Invoice Date";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "cust_id";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Customer";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "docket_number";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Docket Number";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "notes";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Notes";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "text_fully_paid";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Fully Paid";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "invoice_amount";
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.Format = "C2";
-            dataGridViewCellStyle11.NullValue = null;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Invoice Amount";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // unpaid
-            // 
-            this.unpaid.DataPropertyName = "invoice_unpaid";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle12.Format = "C2";
-            dataGridViewCellStyle12.NullValue = null;
-            this.unpaid.DefaultCellStyle = dataGridViewCellStyle12;
-            this.unpaid.HeaderText = "Invoice Unpaid";
-            this.unpaid.Name = "unpaid";
-            this.unpaid.ReadOnly = true;
-            // 
-            // recent_payment
-            // 
-            this.recent_payment.DataPropertyName = "recent_payment";
-            this.recent_payment.HeaderText = "Allocation";
-            this.recent_payment.Name = "recent_payment";
             // 
             // Receipts
             // 

@@ -63,11 +63,14 @@
             this.cntPeriodValue = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cntPeriodEnd = new System.Windows.Forms.Label();
+            this.autoVacBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.autoVacTableAdapter = new Vectra.DataSet2TableAdapters.autoVacTableAdapter();
             bus_namesLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingNavigator)).BeginInit();
             this.configurationBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoVacBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bus_namesLabel
@@ -132,7 +135,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(36, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -250,13 +253,13 @@
             // 
             this.zgc1.Location = new System.Drawing.Point(364, 14);
             this.zgc1.Name = "zgc1";
-            this.zgc1.ScrollGrace = 0;
-            this.zgc1.ScrollMaxX = 0;
-            this.zgc1.ScrollMaxY = 0;
-            this.zgc1.ScrollMaxY2 = 0;
-            this.zgc1.ScrollMinX = 0;
-            this.zgc1.ScrollMinY = 0;
-            this.zgc1.ScrollMinY2 = 0;
+            this.zgc1.ScrollGrace = 0D;
+            this.zgc1.ScrollMaxX = 0D;
+            this.zgc1.ScrollMaxY = 0D;
+            this.zgc1.ScrollMaxY2 = 0D;
+            this.zgc1.ScrollMinX = 0D;
+            this.zgc1.ScrollMinY = 0D;
+            this.zgc1.ScrollMinY2 = 0D;
             this.zgc1.Size = new System.Drawing.Size(460, 355);
             this.zgc1.TabIndex = 10;
             // 
@@ -384,11 +387,20 @@
             this.cntPeriodEnd.TabIndex = 21;
             this.cntPeriodEnd.Text = "Date";
             // 
+            // autoVacBindingSource
+            // 
+            this.autoVacBindingSource.DataMember = "autoVac";
+            this.autoVacBindingSource.DataSource = this.dataSet2;
+            // 
+            // autoVacTableAdapter
+            // 
+            this.autoVacTableAdapter.ClearBeforeFill = true;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 394);
+            this.ClientSize = new System.Drawing.Size(885, 578);
             this.Controls.Add(this.cntPeriodEnd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cntPeriodValue);
@@ -416,6 +428,7 @@
             this.configurationBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autoVacBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,5 +468,7 @@
         private System.Windows.Forms.Label cntPeriodValue;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label cntPeriodEnd;
+        private System.Windows.Forms.BindingSource autoVacBindingSource;
+        private DataSet2TableAdapters.autoVacTableAdapter autoVacTableAdapter;
     }
 }

@@ -39,7 +39,9 @@ namespace Vectra
         private void Receipts_Load(object sender, EventArgs e)
         {
             long currentTrans = (long)drvReceipt["t_ID"];
-            this.iNVOICE_RECIEPTSTableAdapter.FillBy(this.dataSet2.INVOICE_RECIEPTS, currentTrans);                        
+            this.iNVOICE_RECIEPTSTableAdapter.FillBy(this.dataSet2.INVOICE_RECIEPTS, currentTrans);
+
+            this.sqLiteConnection1.ConnectionString = da.Connection.ConnectionString;
         }
 
         private void doSQL(string sqlText)

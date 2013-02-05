@@ -33,39 +33,39 @@
             System.Windows.Forms.Label t_dateLabel;
             System.Windows.Forms.Label t_amountLabel;
             System.Windows.Forms.Label name_address_1Label;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.t_idTextBox = new System.Windows.Forms.TextBox();
+            this.customer_transBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet2 = new Vectra.DataSet2();
             this.t_dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.t_amountTextBox = new System.Windows.Forms.TextBox();
             this.name_address_1TextBox = new System.Windows.Forms.TextBox();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cust_idTextBox = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.sqLiteConnection1 = new Devart.Data.SQLite.SQLiteConnection();
             this.iNVOICE_RECIEPTSDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoice_key = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iNVOICE_RECIEPTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet2 = new Vectra.DataSet2();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customer_transBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iNVOICE_HEADERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customer_transTableAdapter = new Vectra.DataSet2TableAdapters.customer_transTableAdapter();
             this.tableAdapterManager = new Vectra.DataSet2TableAdapters.TableAdapterManager();
             this.customerTableAdapter = new Vectra.DataSet2TableAdapters.customerTableAdapter();
             this.iNVOICE_HEADERTableAdapter = new Vectra.DataSet2TableAdapters.INVOICE_HEADERTableAdapter();
             this.iNVOICE_RECIEPTSTableAdapter = new Vectra.DataSet2TableAdapters.INVOICE_RECIEPTSTableAdapter();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.invoice_key = new System.Windows.Forms.DataGridViewTextBoxColumn();
             t_idLabel = new System.Windows.Forms.Label();
             t_dateLabel = new System.Windows.Forms.Label();
             t_amountLabel = new System.Windows.Forms.Label();
             name_address_1Label = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.iNVOICE_RECIEPTSDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iNVOICE_RECIEPTSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customer_transBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customer_transBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNVOICE_RECIEPTSDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNVOICE_RECIEPTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iNVOICE_HEADERBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,6 +117,16 @@
             this.t_idTextBox.TabIndex = 0;
             this.t_idTextBox.TabStop = false;
             // 
+            // customer_transBindingSource
+            // 
+            this.customer_transBindingSource.DataMember = "customer_trans";
+            this.customer_transBindingSource.DataSource = this.dataSet2;
+            // 
+            // dataSet2
+            // 
+            this.dataSet2.DataSetName = "DataSet2";
+            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // t_dateDateTimePicker
             // 
             this.t_dateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.customer_transBindingSource, "t_date", true));
@@ -148,6 +158,11 @@
             this.name_address_1TextBox.Size = new System.Drawing.Size(526, 13);
             this.name_address_1TextBox.TabIndex = 21;
             this.name_address_1TextBox.TabStop = false;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "customer";
+            this.customerBindingSource.DataSource = this.dataSet2;
             // 
             // cust_idTextBox
             // 
@@ -181,8 +196,8 @@
             // iNVOICE_RECIEPTSDataGridView
             // 
             this.iNVOICE_RECIEPTSDataGridView.AllowUserToAddRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
-            this.iNVOICE_RECIEPTSDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Silver;
+            this.iNVOICE_RECIEPTSDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.iNVOICE_RECIEPTSDataGridView.AutoGenerateColumns = false;
             this.iNVOICE_RECIEPTSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.iNVOICE_RECIEPTSDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -197,70 +212,6 @@
             this.iNVOICE_RECIEPTSDataGridView.RowHeadersVisible = false;
             this.iNVOICE_RECIEPTSDataGridView.Size = new System.Drawing.Size(465, 151);
             this.iNVOICE_RECIEPTSDataGridView.TabIndex = 28;
-            // 
-            // iNVOICE_RECIEPTSBindingSource
-            // 
-            this.iNVOICE_RECIEPTSBindingSource.DataMember = "INVOICE_RECIEPTS";
-            this.iNVOICE_RECIEPTSBindingSource.DataSource = this.dataSet2;
-            // 
-            // dataSet2
-            // 
-            this.dataSet2.DataSetName = "DataSet2";
-            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "customer";
-            this.customerBindingSource.DataSource = this.dataSet2;
-            // 
-            // customer_transBindingSource
-            // 
-            this.customer_transBindingSource.DataMember = "customer_trans";
-            this.customer_transBindingSource.DataSource = this.dataSet2;
-            // 
-            // iNVOICE_HEADERBindingSource
-            // 
-            this.iNVOICE_HEADERBindingSource.DataMember = "INVOICE_HEADER";
-            this.iNVOICE_HEADERBindingSource.DataSource = this.dataSet2;
-            // 
-            // customer_transTableAdapter
-            // 
-            this.customer_transTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.configurationTableAdapter = null;
-            this.tableAdapterManager.customer_transTableAdapter = this.customer_transTableAdapter;
-            this.tableAdapterManager.customerTableAdapter = this.customerTableAdapter;
-            this.tableAdapterManager.debtors_summaryTableAdapter = null;
-            this.tableAdapterManager.debtorsTableAdapter = null;
-            this.tableAdapterManager.gl_categoryTableAdapter = null;
-            this.tableAdapterManager.gl_txnsTableAdapter = null;
-            this.tableAdapterManager.glTableAdapter = null;
-            this.tableAdapterManager.INVOICE_HEADERTableAdapter = this.iNVOICE_HEADERTableAdapter;
-            this.tableAdapterManager.invoice_itemsTableAdapter = null;
-            this.tableAdapterManager.INVOICE_RECIEPTSTableAdapter = this.iNVOICE_RECIEPTSTableAdapter;
-            this.tableAdapterManager.payment_typeTableAdapter = null;
-            this.tableAdapterManager.PaymentAdjustRptTableAdapter = null;
-            this.tableAdapterManager.product_typeTableAdapter = null;
-            this.tableAdapterManager.ProductSalesReportTableAdapter = null;
-            this.tableAdapterManager.ProductSalesSummaryTableAdapter = null;
-            this.tableAdapterManager.productsTableAdapter = null;
-            this.tableAdapterManager.sqlite_sequenceTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Vectra.DataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // customerTableAdapter
-            // 
-            this.customerTableAdapter.ClearBeforeFill = true;
-            // 
-            // iNVOICE_HEADERTableAdapter
-            // 
-            this.iNVOICE_HEADERTableAdapter.ClearBeforeFill = true;
-            // 
-            // iNVOICE_RECIEPTSTableAdapter
-            // 
-            this.iNVOICE_RECIEPTSTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -293,6 +244,56 @@
             this.invoice_key.Name = "invoice_key";
             this.invoice_key.Visible = false;
             // 
+            // iNVOICE_RECIEPTSBindingSource
+            // 
+            this.iNVOICE_RECIEPTSBindingSource.DataMember = "INVOICE_RECIEPTS";
+            this.iNVOICE_RECIEPTSBindingSource.DataSource = this.dataSet2;
+            // 
+            // iNVOICE_HEADERBindingSource
+            // 
+            this.iNVOICE_HEADERBindingSource.DataMember = "INVOICE_HEADER";
+            this.iNVOICE_HEADERBindingSource.DataSource = this.dataSet2;
+            // 
+            // customer_transTableAdapter
+            // 
+            this.customer_transTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.configurationTableAdapter = null;
+            this.tableAdapterManager.customer_transTableAdapter = this.customer_transTableAdapter;
+            this.tableAdapterManager.customerTableAdapter = this.customerTableAdapter;
+            this.tableAdapterManager.debtors_summaryTableAdapter = null;
+            this.tableAdapterManager.debtorsTableAdapter = null;
+            this.tableAdapterManager.gl_categoryTableAdapter = null;
+            this.tableAdapterManager.gl_txnsTableAdapter = null;
+            this.tableAdapterManager.glTableAdapter = null;
+            this.tableAdapterManager.INVOICE_HEADERTableAdapter = this.iNVOICE_HEADERTableAdapter;
+            this.tableAdapterManager.invoice_itemsTableAdapter = null;
+            this.tableAdapterManager.INVOICE_RECIEPTSTableAdapter = this.iNVOICE_RECIEPTSTableAdapter;
+            this.tableAdapterManager.payment_typeTableAdapter = null;
+            this.tableAdapterManager.PaymentAdjustRptTableAdapter = null;
+            this.tableAdapterManager.product_typeTableAdapter = null;
+            this.tableAdapterManager.ProductSalesReportTableAdapter = null;
+            this.tableAdapterManager.ProductSalesSummaryTableAdapter = null;
+            this.tableAdapterManager.productsTableAdapter = null;
+            this.tableAdapterManager.SalesSummary1TableAdapter = null;
+            this.tableAdapterManager.sqlite_sequenceTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Vectra.DataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // iNVOICE_HEADERTableAdapter
+            // 
+            this.iNVOICE_HEADERTableAdapter.ClearBeforeFill = true;
+            // 
+            // iNVOICE_RECIEPTSTableAdapter
+            // 
+            this.iNVOICE_RECIEPTSTableAdapter.ClearBeforeFill = true;
+            // 
             // ReceiptEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,11 +315,11 @@
             this.Name = "ReceiptEdit";
             this.Text = "Receipts";
             this.Load += new System.EventHandler(this.Receipts_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.iNVOICE_RECIEPTSDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iNVOICE_RECIEPTSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customer_transBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customer_transBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNVOICE_RECIEPTSDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iNVOICE_RECIEPTSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iNVOICE_HEADERBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

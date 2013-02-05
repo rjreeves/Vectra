@@ -55,53 +55,6 @@ Execute: select t_week_id from acnt_period
                     where date('now','localtime') = t_date;
 Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
 Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Prepare: Select acnt_period, StatementDate from configuration
-Execute: Select acnt_period, StatementDate from configuration
-Prepare: select t_date from acnt_period a 
-                                           where a.t_week_id = '201244'
-                                           and t_Day_of_week = 6;
-Execute: select t_date from acnt_period a 
-                                           where a.t_week_id = '201244'
-                                           and t_Day_of_week = 6;
-Close connection
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Prepare: select t_week_id from acnt_period where t_date = date('now','localtime')
-Execute: select t_week_id from acnt_period where t_date = date('now','localtime')
-Prepare: select t_date from acnt_period a 
-                                           where a.t_week_id = '201301'
-                                           and t_Day_of_week = 6;
-Execute: select t_date from acnt_period a 
-                                           where a.t_week_id = '201301'
-                                           and t_Day_of_week = 6;
-Prepare: update configuration 
-                    set acnt_period = (select t_week_id from acnt_period where t_date = date('now','localtime'))
-Execute: update configuration 
-                    set acnt_period = (select t_week_id from acnt_period where t_date = date('now','localtime'))
-Prepare: Select acnt_period, StatementDate from configuration
-Execute: Select acnt_period, StatementDate from configuration
-Prepare: select t_date from acnt_period a 
-                                           where a.t_week_id = '201301'
-                                           and t_Day_of_week = 6;
-Execute: select t_date from acnt_period a 
-                                           where a.t_week_id = '201301'
-                                           and t_Day_of_week = 6;
-Close connection
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Prepare: select t_week_id from acnt_period where t_date = date('now','localtime')
-Execute: select t_week_id from acnt_period where t_date = date('now','localtime')
-Prepare: select t_date from acnt_period a 
-                                           where a.t_week_id = '201301'
-                                           and t_Day_of_week = 6;
-Execute: select t_date from acnt_period a 
-                                           where a.t_week_id = '201301'
-                                           and t_Day_of_week = 6;
-Prepare: Select acnt_period from configuration
-Execute: Select acnt_period from configuration
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Connect: "Data Source="C:\Vectra\Data\PROD.db3";"
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
 Prepare: SELECT     cust_id, name_address_1, name_address_2, name_address_3, name_address_4, pcode, phone, contact_name, abn, credit_rating, notes, dunning, 
                       avg_payment, open_bal
 FROM         customer
@@ -148,6 +101,37 @@ ORDER BY name_address_1
 Close connection
 Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
 Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     recpt_number, amount, recpt_date, invoice_number, cust_id, invoice_key
+FROM         INVOICE_RECIEPTS
+Execute: SELECT     recpt_number, amount, recpt_date, invoice_number, cust_id, invoice_key
+FROM         INVOICE_RECIEPTS
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT cust_id, docket_number, invoice_amount, invoice_date, invoice_locked, invoice_number, invoice_unpaid, notes, recent_payment, text_fully_paid, sort_date FROM INVOICE_HEADER WHERE (cust_id = $1) AND (invoice_unpaid > 0) ORDER BY sort_date
+Execute: SELECT cust_id, docket_number, invoice_amount, invoice_date, invoice_locked, invoice_number, invoice_unpaid, notes, recent_payment, text_fully_paid, sort_date FROM INVOICE_HEADER WHERE (cust_id = $1) AND (invoice_unpaid > 0) ORDER BY sort_date
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Execute: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
 Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
 FROM         customer_trans
 Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
@@ -183,6 +167,435 @@ Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
 Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
 Prepare: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
 Execute: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Execute: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     INVOICE_RECIEPTS.recpt_number, INVOICE_RECIEPTS.amount, INVOICE_RECIEPTS.recpt_date, INVOICE_RECIEPTS.cust_id, 
+                      INVOICE_RECIEPTS.invoice_key, INVOICE_HEADER.invoice_number, INVOICE_HEADER.invoice_date, INVOICE_HEADER.cust_id AS Expr1, 
+                      INVOICE_HEADER.docket_number, INVOICE_HEADER.notes, INVOICE_HEADER.text_fully_paid, INVOICE_HEADER.invoice_amount, 
+                      INVOICE_HEADER.invoice_unpaid, INVOICE_HEADER.invoice_locked
+FROM         INVOICE_RECIEPTS INNER JOIN
+                      INVOICE_HEADER ON INVOICE_RECIEPTS.invoice_key = INVOICE_HEADER.invoice_number
+WHERE     (INVOICE_RECIEPTS.recpt_number = $1)
+Execute: SELECT     INVOICE_RECIEPTS.recpt_number, INVOICE_RECIEPTS.amount, INVOICE_RECIEPTS.recpt_date, INVOICE_RECIEPTS.cust_id, 
+                      INVOICE_RECIEPTS.invoice_key, INVOICE_HEADER.invoice_number, INVOICE_HEADER.invoice_date, INVOICE_HEADER.cust_id AS Expr1, 
+                      INVOICE_HEADER.docket_number, INVOICE_HEADER.notes, INVOICE_HEADER.text_fully_paid, INVOICE_HEADER.invoice_amount, 
+                      INVOICE_HEADER.invoice_unpaid, INVOICE_HEADER.invoice_locked
+FROM         INVOICE_RECIEPTS INNER JOIN
+                      INVOICE_HEADER ON INVOICE_RECIEPTS.invoice_key = INVOICE_HEADER.invoice_number
+WHERE     (INVOICE_RECIEPTS.recpt_number = $1)
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Update invoice_header set invoice_unpaid = invoice_unpaid + 4 where invoice_number = '1000'
+Execute: Update invoice_header set invoice_unpaid = invoice_unpaid + 4 where invoice_number = '1000'
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Update customer_trans set t_unpaid = t_unpaid + 4 where t_src_id = '1000'
+Execute: Update customer_trans set t_unpaid = t_unpaid + 4 where t_src_id = '1000'
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: update customer set open_bal = open_bal + 9 where cust_id = '561'
+Execute: update customer set open_bal = open_bal + 9 where cust_id = '561'
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Delete from customer_trans where t_id = '21'
+Execute: Delete from customer_trans where t_id = '21'
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Delete from iNVOICE_RECIEPTS where recpt_number = '21'
+Execute: Delete from iNVOICE_RECIEPTS where recpt_number = '21'
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Execute: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     recpt_number, amount, recpt_date, invoice_number, cust_id, invoice_key
+FROM         INVOICE_RECIEPTS
+Execute: SELECT     recpt_number, amount, recpt_date, invoice_number, cust_id, invoice_key
+FROM         INVOICE_RECIEPTS
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT cust_id, docket_number, invoice_amount, invoice_date, invoice_locked, invoice_number, invoice_unpaid, notes, recent_payment, text_fully_paid, sort_date FROM INVOICE_HEADER WHERE (cust_id = $1) AND (invoice_unpaid > 0) ORDER BY sort_date
+Execute: SELECT cust_id, docket_number, invoice_amount, invoice_date, invoice_locked, invoice_number, invoice_unpaid, notes, recent_payment, text_fully_paid, sort_date FROM INVOICE_HEADER WHERE (cust_id = $1) AND (invoice_unpaid > 0) ORDER BY sort_date
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: UPDATE "main"."INVOICE_HEADER" SET "invoice_number" = $1, "cust_id" = $2, "docket_number" = $3, "notes" = $4, "text_fully_paid" = $5, "invoice_amount" = $6, "invoice_unpaid" = $7, "invoice_locked" = $8, "recent_payment" = $9, "invoice_date" = $10, "sort_date" = $11 WHERE (("invoice_number" = $12) AND (($13 = 1 AND "cust_id" IS NULL) OR ("cust_id" = $14)) AND (($15 = 1 AND "docket_number" IS NULL) OR ("docket_number" = $16)) AND (($17 = 1 AND "notes" IS NULL) OR ("notes" = $18)) AND (($19 = 1 AND "text_fully_paid" IS NULL) OR ("text_fully_paid" = $20)) AND (($21 = 1 AND "invoice_amount" IS NULL) OR ("invoice_amount" = $22)) AND (($23 = 1 AND "invoice_unpaid" IS NULL) OR ("invoice_unpaid" = $24)) AND (($25 = 1 AND "invoice_locked" IS NULL) OR ("invoice_locked" = $26)) AND (($27 = 1 AND "recent_payment" IS NULL) OR ("recent_payment" = $28)) AND (($29 = 1 AND "invoice_date" IS NULL) OR ("invoice_date" = $30)) AND (($31 = 1 AND "sort_date" IS NULL) OR ("sort_date" = $32)))
+Execute: UPDATE "main"."INVOICE_HEADER" SET "invoice_number" = $1, "cust_id" = $2, "docket_number" = $3, "notes" = $4, "text_fully_paid" = $5, "invoice_amount" = $6, "invoice_unpaid" = $7, "invoice_locked" = $8, "recent_payment" = $9, "invoice_date" = $10, "sort_date" = $11 WHERE (("invoice_number" = $12) AND (($13 = 1 AND "cust_id" IS NULL) OR ("cust_id" = $14)) AND (($15 = 1 AND "docket_number" IS NULL) OR ("docket_number" = $16)) AND (($17 = 1 AND "notes" IS NULL) OR ("notes" = $18)) AND (($19 = 1 AND "text_fully_paid" IS NULL) OR ("text_fully_paid" = $20)) AND (($21 = 1 AND "invoice_amount" IS NULL) OR ("invoice_amount" = $22)) AND (($23 = 1 AND "invoice_unpaid" IS NULL) OR ("invoice_unpaid" = $24)) AND (($25 = 1 AND "invoice_locked" IS NULL) OR ("invoice_locked" = $26)) AND (($27 = 1 AND "recent_payment" IS NULL) OR ("recent_payment" = $28)) AND (($29 = 1 AND "invoice_date" IS NULL) OR ("invoice_date" = $30)) AND (($31 = 1 AND "sort_date" IS NULL) OR ("sort_date" = $32)))
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     acnt_period
+FROM         configuration
+Execute: SELECT     acnt_period
+FROM         configuration
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: INSERT INTO "main"."customer_trans" ("t_id", "t_type", "t_cust_id", "t_src_id", "t_ref_id", "t_date", "t_note", "t_timestamp", "t_amount", "t_unpaid", "t_no_print", "t_finished", "t_week_id", "t_src_dckt_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+Execute: INSERT INTO "main"."customer_trans" ("t_id", "t_type", "t_cust_id", "t_src_id", "t_ref_id", "t_date", "t_note", "t_timestamp", "t_amount", "t_unpaid", "t_no_print", "t_finished", "t_week_id", "t_src_dckt_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Insert into INVOICE_RECIEPTS (cust_id,recpt_number,recpt_date, amount, invoice_key, invoice_number)
+                                       values ('561','21','5/02/2013','5','1000','1000')
+Execute: Insert into INVOICE_RECIEPTS (cust_id,recpt_number,recpt_date, amount, invoice_key, invoice_number)
+                                       values ('561','21','5/02/2013','5','1000','1000')
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Update INVOICE_HEADER set invoice_unpaid = invoice_unpaid - recent_payment where invoice_number = 1000
+Execute: Update INVOICE_HEADER set invoice_unpaid = invoice_unpaid - recent_payment where invoice_number = 1000
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: update customer_trans 
+                    set t_unpaid = (select invoice_unpaid from invoice_header 
+								where customer_trans.t_cust_id = invoice_header.cust_id 
+								and customer_trans.t_src_id = invoice_header.invoice_number
+								and customer_trans.t_type = 'Invoice'
+								and invoice_header.recent_payment <> 0
+								)
+                    where
+	                    exists(
+		                    select * 
+		                    from invoice_header
+		                    where invoice_header.cust_id = customer_trans.t_cust_id 
+		                    and  customer_trans.t_src_id = invoice_header.invoice_number
+		                    and customer_trans.t_type = 'Invoice'
+		                    and invoice_header.recent_payment <> 0
+		                    )
+Execute: update customer_trans 
+                    set t_unpaid = (select invoice_unpaid from invoice_header 
+								where customer_trans.t_cust_id = invoice_header.cust_id 
+								and customer_trans.t_src_id = invoice_header.invoice_number
+								and customer_trans.t_type = 'Invoice'
+								and invoice_header.recent_payment <> 0
+								)
+                    where
+	                    exists(
+		                    select * 
+		                    from invoice_header
+		                    where invoice_header.cust_id = customer_trans.t_cust_id 
+		                    and  customer_trans.t_src_id = invoice_header.invoice_number
+		                    and customer_trans.t_type = 'Invoice'
+		                    and invoice_header.recent_payment <> 0
+		                    )
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Update INVOICE_HEADER set recent_payment = 0 where recent_payment > 0 AND invoice_number = 1000
+Execute: Update INVOICE_HEADER set recent_payment = 0 where recent_payment > 0 AND invoice_number = 1000
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Execute: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     recpt_number, amount, recpt_date, invoice_number, cust_id, invoice_key
+FROM         INVOICE_RECIEPTS
+Execute: SELECT     recpt_number, amount, recpt_date, invoice_number, cust_id, invoice_key
+FROM         INVOICE_RECIEPTS
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT cust_id, docket_number, invoice_amount, invoice_date, invoice_locked, invoice_number, invoice_unpaid, notes, recent_payment, text_fully_paid, sort_date FROM INVOICE_HEADER WHERE (cust_id = $1) AND (invoice_unpaid > 0) ORDER BY sort_date
+Execute: SELECT cust_id, docket_number, invoice_amount, invoice_date, invoice_locked, invoice_number, invoice_unpaid, notes, recent_payment, text_fully_paid, sort_date FROM INVOICE_HEADER WHERE (cust_id = $1) AND (invoice_unpaid > 0) ORDER BY sort_date
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     acnt_period
+FROM         configuration
+Execute: SELECT     acnt_period
+FROM         configuration
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: INSERT INTO "main"."customer_trans" ("t_id", "t_type", "t_cust_id", "t_src_id", "t_ref_id", "t_date", "t_note", "t_timestamp", "t_amount", "t_unpaid", "t_no_print", "t_finished", "t_week_id", "t_src_dckt_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+Execute: INSERT INTO "main"."customer_trans" ("t_id", "t_type", "t_cust_id", "t_src_id", "t_ref_id", "t_date", "t_note", "t_timestamp", "t_amount", "t_unpaid", "t_no_print", "t_finished", "t_week_id", "t_src_dckt_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Execute: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Close connection
+Disconnect
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     INVOICE_RECIEPTS.recpt_number, INVOICE_RECIEPTS.amount, INVOICE_RECIEPTS.recpt_date, INVOICE_RECIEPTS.cust_id, 
+                      INVOICE_RECIEPTS.invoice_key, INVOICE_HEADER.invoice_number, INVOICE_HEADER.invoice_date, INVOICE_HEADER.cust_id AS Expr1, 
+                      INVOICE_HEADER.docket_number, INVOICE_HEADER.notes, INVOICE_HEADER.text_fully_paid, INVOICE_HEADER.invoice_amount, 
+                      INVOICE_HEADER.invoice_unpaid, INVOICE_HEADER.invoice_locked
+FROM         INVOICE_RECIEPTS INNER JOIN
+                      INVOICE_HEADER ON INVOICE_RECIEPTS.invoice_key = INVOICE_HEADER.invoice_number
+WHERE     (INVOICE_RECIEPTS.recpt_number = $1)
+Execute: SELECT     INVOICE_RECIEPTS.recpt_number, INVOICE_RECIEPTS.amount, INVOICE_RECIEPTS.recpt_date, INVOICE_RECIEPTS.cust_id, 
+                      INVOICE_RECIEPTS.invoice_key, INVOICE_HEADER.invoice_number, INVOICE_HEADER.invoice_date, INVOICE_HEADER.cust_id AS Expr1, 
+                      INVOICE_HEADER.docket_number, INVOICE_HEADER.notes, INVOICE_HEADER.text_fully_paid, INVOICE_HEADER.invoice_amount, 
+                      INVOICE_HEADER.invoice_unpaid, INVOICE_HEADER.invoice_locked
+FROM         INVOICE_RECIEPTS INNER JOIN
+                      INVOICE_HEADER ON INVOICE_RECIEPTS.invoice_key = INVOICE_HEADER.invoice_number
+WHERE     (INVOICE_RECIEPTS.recpt_number = $1)
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: update customer set open_bal = open_bal + 1 where cust_id = '561'
+Execute: update customer set open_bal = open_bal + 1 where cust_id = '561'
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Delete from customer_trans where t_id = '22'
+Execute: Delete from customer_trans where t_id = '22'
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Delete from iNVOICE_RECIEPTS where recpt_number = '22'
+Execute: Delete from iNVOICE_RECIEPTS where recpt_number = '22'
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Execute: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     recpt_number, amount, recpt_date, invoice_number, cust_id, invoice_key
+FROM         INVOICE_RECIEPTS
+Execute: SELECT     recpt_number, amount, recpt_date, invoice_number, cust_id, invoice_key
+FROM         INVOICE_RECIEPTS
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT cust_id, docket_number, invoice_amount, invoice_date, invoice_locked, invoice_number, invoice_unpaid, notes, recent_payment, text_fully_paid, sort_date FROM INVOICE_HEADER WHERE (cust_id = $1) AND (invoice_unpaid > 0) ORDER BY sort_date
+Execute: SELECT cust_id, docket_number, invoice_amount, invoice_date, invoice_locked, invoice_number, invoice_unpaid, notes, recent_payment, text_fully_paid, sort_date FROM INVOICE_HEADER WHERE (cust_id = $1) AND (invoice_unpaid > 0) ORDER BY sort_date
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     acnt_period
+FROM         configuration
+Execute: SELECT     acnt_period
+FROM         configuration
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: INSERT INTO "main"."customer_trans" ("t_id", "t_type", "t_cust_id", "t_src_id", "t_ref_id", "t_date", "t_note", "t_timestamp", "t_amount", "t_unpaid", "t_no_print", "t_finished", "t_week_id", "t_src_dckt_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+Execute: INSERT INTO "main"."customer_trans" ("t_id", "t_type", "t_cust_id", "t_src_id", "t_ref_id", "t_date", "t_note", "t_timestamp", "t_amount", "t_unpaid", "t_no_print", "t_finished", "t_week_id", "t_src_dckt_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Execute: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     INVOICE_RECIEPTS.recpt_number, INVOICE_RECIEPTS.amount, INVOICE_RECIEPTS.recpt_date, INVOICE_RECIEPTS.cust_id, 
+                      INVOICE_RECIEPTS.invoice_key, INVOICE_HEADER.invoice_number, INVOICE_HEADER.invoice_date, INVOICE_HEADER.cust_id AS Expr1, 
+                      INVOICE_HEADER.docket_number, INVOICE_HEADER.notes, INVOICE_HEADER.text_fully_paid, INVOICE_HEADER.invoice_amount, 
+                      INVOICE_HEADER.invoice_unpaid, INVOICE_HEADER.invoice_locked
+FROM         INVOICE_RECIEPTS INNER JOIN
+                      INVOICE_HEADER ON INVOICE_RECIEPTS.invoice_key = INVOICE_HEADER.invoice_number
+WHERE     (INVOICE_RECIEPTS.recpt_number = $1)
+Execute: SELECT     INVOICE_RECIEPTS.recpt_number, INVOICE_RECIEPTS.amount, INVOICE_RECIEPTS.recpt_date, INVOICE_RECIEPTS.cust_id, 
+                      INVOICE_RECIEPTS.invoice_key, INVOICE_HEADER.invoice_number, INVOICE_HEADER.invoice_date, INVOICE_HEADER.cust_id AS Expr1, 
+                      INVOICE_HEADER.docket_number, INVOICE_HEADER.notes, INVOICE_HEADER.text_fully_paid, INVOICE_HEADER.invoice_amount, 
+                      INVOICE_HEADER.invoice_unpaid, INVOICE_HEADER.invoice_locked
+FROM         INVOICE_RECIEPTS INNER JOIN
+                      INVOICE_HEADER ON INVOICE_RECIEPTS.invoice_key = INVOICE_HEADER.invoice_number
+WHERE     (INVOICE_RECIEPTS.recpt_number = $1)
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: update customer set open_bal = open_bal + 1 where cust_id = '561'
+Execute: update customer set open_bal = open_bal + 1 where cust_id = '561'
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Delete from customer_trans where t_id = '22'
+Execute: Delete from customer_trans where t_id = '22'
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Delete from iNVOICE_RECIEPTS where recpt_number = '22'
+Execute: Delete from iNVOICE_RECIEPTS where recpt_number = '22'
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Execute: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     recpt_number, amount, recpt_date, invoice_number, cust_id, invoice_key
+FROM         INVOICE_RECIEPTS
+Execute: SELECT     recpt_number, amount, recpt_date, invoice_number, cust_id, invoice_key
+FROM         INVOICE_RECIEPTS
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT cust_id, docket_number, invoice_amount, invoice_date, invoice_locked, invoice_number, invoice_unpaid, notes, recent_payment, text_fully_paid, sort_date FROM INVOICE_HEADER WHERE (cust_id = $1) AND (invoice_unpaid > 0) ORDER BY sort_date
+Execute: SELECT cust_id, docket_number, invoice_amount, invoice_date, invoice_locked, invoice_number, invoice_unpaid, notes, recent_payment, text_fully_paid, sort_date FROM INVOICE_HEADER WHERE (cust_id = $1) AND (invoice_unpaid > 0) ORDER BY sort_date
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: UPDATE "main"."INVOICE_HEADER" SET "invoice_number" = $1, "cust_id" = $2, "docket_number" = $3, "notes" = $4, "text_fully_paid" = $5, "invoice_amount" = $6, "invoice_unpaid" = $7, "invoice_locked" = $8, "recent_payment" = $9, "invoice_date" = $10, "sort_date" = $11 WHERE (("invoice_number" = $12) AND (($13 = 1 AND "cust_id" IS NULL) OR ("cust_id" = $14)) AND (($15 = 1 AND "docket_number" IS NULL) OR ("docket_number" = $16)) AND (($17 = 1 AND "notes" IS NULL) OR ("notes" = $18)) AND (($19 = 1 AND "text_fully_paid" IS NULL) OR ("text_fully_paid" = $20)) AND (($21 = 1 AND "invoice_amount" IS NULL) OR ("invoice_amount" = $22)) AND (($23 = 1 AND "invoice_unpaid" IS NULL) OR ("invoice_unpaid" = $24)) AND (($25 = 1 AND "invoice_locked" IS NULL) OR ("invoice_locked" = $26)) AND (($27 = 1 AND "recent_payment" IS NULL) OR ("recent_payment" = $28)) AND (($29 = 1 AND "invoice_date" IS NULL) OR ("invoice_date" = $30)) AND (($31 = 1 AND "sort_date" IS NULL) OR ("sort_date" = $32)))
+Execute: UPDATE "main"."INVOICE_HEADER" SET "invoice_number" = $1, "cust_id" = $2, "docket_number" = $3, "notes" = $4, "text_fully_paid" = $5, "invoice_amount" = $6, "invoice_unpaid" = $7, "invoice_locked" = $8, "recent_payment" = $9, "invoice_date" = $10, "sort_date" = $11 WHERE (("invoice_number" = $12) AND (($13 = 1 AND "cust_id" IS NULL) OR ("cust_id" = $14)) AND (($15 = 1 AND "docket_number" IS NULL) OR ("docket_number" = $16)) AND (($17 = 1 AND "notes" IS NULL) OR ("notes" = $18)) AND (($19 = 1 AND "text_fully_paid" IS NULL) OR ("text_fully_paid" = $20)) AND (($21 = 1 AND "invoice_amount" IS NULL) OR ("invoice_amount" = $22)) AND (($23 = 1 AND "invoice_unpaid" IS NULL) OR ("invoice_unpaid" = $24)) AND (($25 = 1 AND "invoice_locked" IS NULL) OR ("invoice_locked" = $26)) AND (($27 = 1 AND "recent_payment" IS NULL) OR ("recent_payment" = $28)) AND (($29 = 1 AND "invoice_date" IS NULL) OR ("invoice_date" = $30)) AND (($31 = 1 AND "sort_date" IS NULL) OR ("sort_date" = $32)))
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     acnt_period
+FROM         configuration
+Execute: SELECT     acnt_period
+FROM         configuration
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: INSERT INTO "main"."customer_trans" ("t_id", "t_type", "t_cust_id", "t_src_id", "t_ref_id", "t_date", "t_note", "t_timestamp", "t_amount", "t_unpaid", "t_no_print", "t_finished", "t_week_id", "t_src_dckt_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+Execute: INSERT INTO "main"."customer_trans" ("t_id", "t_type", "t_cust_id", "t_src_id", "t_ref_id", "t_date", "t_note", "t_timestamp", "t_amount", "t_unpaid", "t_no_print", "t_finished", "t_week_id", "t_src_dckt_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Insert into INVOICE_RECIEPTS (cust_id,recpt_number,recpt_date, amount, invoice_key, invoice_number)
+                                       values ('561','22','5/02/2013','1','1000','1000')
+Execute: Insert into INVOICE_RECIEPTS (cust_id,recpt_number,recpt_date, amount, invoice_key, invoice_number)
+                                       values ('561','22','5/02/2013','1','1000','1000')
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Update INVOICE_HEADER set invoice_unpaid = invoice_unpaid - recent_payment where invoice_number = 1000
+Execute: Update INVOICE_HEADER set invoice_unpaid = invoice_unpaid - recent_payment where invoice_number = 1000
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: update customer_trans 
+                    set t_unpaid = (select invoice_unpaid from invoice_header 
+								where customer_trans.t_cust_id = invoice_header.cust_id 
+								and customer_trans.t_src_id = invoice_header.invoice_number
+								and customer_trans.t_type = 'Invoice'
+								and invoice_header.recent_payment <> 0
+								)
+                    where
+	                    exists(
+		                    select * 
+		                    from invoice_header
+		                    where invoice_header.cust_id = customer_trans.t_cust_id 
+		                    and  customer_trans.t_src_id = invoice_header.invoice_number
+		                    and customer_trans.t_type = 'Invoice'
+		                    and invoice_header.recent_payment <> 0
+		                    )
+Execute: update customer_trans 
+                    set t_unpaid = (select invoice_unpaid from invoice_header 
+								where customer_trans.t_cust_id = invoice_header.cust_id 
+								and customer_trans.t_src_id = invoice_header.invoice_number
+								and customer_trans.t_type = 'Invoice'
+								and invoice_header.recent_payment <> 0
+								)
+                    where
+	                    exists(
+		                    select * 
+		                    from invoice_header
+		                    where invoice_header.cust_id = customer_trans.t_cust_id 
+		                    and  customer_trans.t_src_id = invoice_header.invoice_number
+		                    and customer_trans.t_type = 'Invoice'
+		                    and invoice_header.recent_payment <> 0
+		                    )
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Update INVOICE_HEADER set recent_payment = 0 where recent_payment > 0 AND invoice_number = 1000
+Execute: Update INVOICE_HEADER set recent_payment = 0 where recent_payment > 0 AND invoice_number = 1000
 Close connection
 Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
 Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
