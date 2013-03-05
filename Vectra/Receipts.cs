@@ -85,7 +85,7 @@ namespace Vectra
         }
         
 
-        private void btnApply_Click(object sender, EventArgs e)
+        private void btnApply_Click(object sender, EventArgs e)  //AUTO APPLY
         {   
             Decimal payAmt = Convert.ToDecimal(t_amountTextBox.Text);
             if (payAmt <= 0)
@@ -210,7 +210,7 @@ namespace Vectra
             t_idTextBox.Focus();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)   // Simple APPLY
         {
             Decimal paymntAllocations = 0;
 
@@ -298,7 +298,7 @@ namespace Vectra
             UnAllocatedAmount.Text = String.Format("{0:C}", unallocated_bal);
             for (int idx = 0; idx < iNVOICE_HEADERBindingSource.Count; idx++)
                 {
-                    iNVOICE_HEADERDataGridView[8, idx].Value = null;
+                    iNVOICE_HEADERDataGridView[8, idx].Value = 0;
                 }
         }
 
@@ -324,7 +324,15 @@ namespace Vectra
                         }
                         else //if (iNVOICE_HEADERDataGridView[8, idx].Value != null)
                         {
-                            Decimal pymt = Decimal.Parse(iNVOICE_HEADERDataGridView[8, idx].Value.ToString());
+                            Decimal pymt;
+                            try
+                            {
+                                pymt = Decimal.Parse(iNVOICE_HEADERDataGridView[8, idx].Value.ToString());
+                            }
+                            catch (Exception ex)
+                            {
+                                pymt = 0;
+                            }
                             iNVOICE_HEADERDataGridView[8, idx].Value = pymt.ToString();
                             Decimal unpaid = Decimal.Parse(iNVOICE_HEADERDataGridView[7, idx].Value.ToString());
                             if (pymt > unpaid)
@@ -349,6 +357,7 @@ namespace Vectra
             {
                 MessageBox.Show(String.Format("Msg: {0}", ex.Message));
             }
+            if (unallocated_bal > 0) { errorFlag = true;  }
         }
 
         private void iNVOICE_HEADERDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
