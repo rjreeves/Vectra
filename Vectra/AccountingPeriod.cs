@@ -37,6 +37,7 @@ namespace Vectra
         private void AccountingPeriod_Load(object sender, EventArgs e)
         {
             getAcntPeriod();
+
         }
 
         private void getAcntPeriod()
@@ -60,6 +61,26 @@ namespace Vectra
             dr1.Read();
             this.textBox6.Text = dr1.GetInt32(0).ToString();
             this.textBox5.Text = getFridaysDate(dr1.GetInt32(0)).ToString("dd-MMM-yyyy");
+            sqLiteConnection1.Close();
+
+            string cmd = @"select strftime('%d-%m-%Y',t_timestamp) as '{0}', 
+                                            t_week_id as '{1}' ,count(*) as '{2}'
+                                            from invoice_header h, customer_trans t, configuration c
+                                            where invoice_number = t_src_id and t_week_id > (acnt_period - 3)
+                                            group by  Date(t_timestamp), t_week_id";
+            string sqlcmd = String.Format(cmd, "Entry Date","Accounting Period", "Invoices");
+            SQLiteDataAdapter da = new SQLiteDataAdapter(sqlcmd.ToString(), sqLiteConnection1);
+
+            DataTable dt = new DataTable();           
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            dataGridView1.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridView1.Width = dataGridView1.Columns[0].Width + dataGridView1.Columns[1].Width + dataGridView1.Columns[2].Width + 5;
+            dataGridView1.ReadOnly = true;
+
         }
 
         private DateTime getFridaysDate(Int32 weekNo)

@@ -48,14 +48,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.sqLiteDataAdapter1 = new Devart.Data.SQLite.SQLiteDataAdapter();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(273, 217);
+            this.button3.Location = new System.Drawing.Point(264, 211);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -66,7 +70,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 40);
+            this.label1.Location = new System.Drawing.Point(47, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 13);
             this.label1.TabIndex = 3;
@@ -75,7 +79,7 @@
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(224, 40);
+            this.textBox1.Location = new System.Drawing.Point(215, 34);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(43, 13);
@@ -86,7 +90,7 @@
             // 
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.ForeColor = System.Drawing.Color.Maroon;
-            this.groupBox1.Location = new System.Drawing.Point(15, 115);
+            this.groupBox1.Location = new System.Drawing.Point(6, 109);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(333, 96);
             this.groupBox1.TabIndex = 5;
@@ -108,7 +112,7 @@
             // 
             // btnForce
             // 
-            this.btnForce.Location = new System.Drawing.Point(18, 282);
+            this.btnForce.Location = new System.Drawing.Point(9, 276);
             this.btnForce.Name = "btnForce";
             this.btnForce.Size = new System.Drawing.Size(131, 42);
             this.btnForce.TabIndex = 6;
@@ -119,7 +123,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 266);
+            this.label2.Location = new System.Drawing.Point(6, 260);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 13);
             this.label2.TabIndex = 7;
@@ -127,8 +131,7 @@
             // 
             // sqLiteConnection1
             // 
-            this.sqLiteConnection1.ConnectionString = myConfig.connstr;
-                
+            this.sqLiteConnection1.ConnectionString = "Data Source=C:\\Vectra\\Data\\PROD.db3;";
             this.sqLiteConnection1.Name = "sqLiteConnection1";
             this.sqLiteConnection1.Owner = this;
             // 
@@ -150,7 +153,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.Control;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(155, 282);
+            this.textBox3.Location = new System.Drawing.Point(146, 276);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(190, 42);
@@ -161,7 +164,7 @@
             // textBox4
             // 
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(275, 40);
+            this.textBox4.Location = new System.Drawing.Point(266, 34);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(70, 13);
@@ -171,7 +174,7 @@
             // textBox5
             // 
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(275, 72);
+            this.textBox5.Location = new System.Drawing.Point(266, 66);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(70, 13);
@@ -181,7 +184,7 @@
             // textBox6
             // 
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(224, 72);
+            this.textBox6.Location = new System.Drawing.Point(215, 66);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(43, 13);
@@ -191,7 +194,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 72);
+            this.label3.Location = new System.Drawing.Point(30, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(186, 13);
             this.label3.TabIndex = 12;
@@ -201,7 +204,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(221, 19);
+            this.label4.Location = new System.Drawing.Point(212, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 13;
@@ -211,17 +214,40 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(277, 19);
+            this.label5.Location = new System.Drawing.Point(268, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 13);
             this.label5.TabIndex = 14;
             this.label5.Text = "Firday\'s Date";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(9, 359);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(330, 213);
+            this.dataGridView1.TabIndex = 15;
+            // 
+            // sqLiteDataAdapter1
+            // 
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 340);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Recent Invoices Summary";
+            // 
             // AccountingPeriod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 335);
+            this.ClientSize = new System.Drawing.Size(351, 584);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -244,6 +270,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,5 +296,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private Devart.Data.SQLite.SQLiteDataAdapter sqLiteDataAdapter1;
+        private System.Windows.Forms.Label label6;
     }
 }
