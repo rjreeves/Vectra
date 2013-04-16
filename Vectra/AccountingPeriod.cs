@@ -36,6 +36,7 @@ namespace Vectra
 
         private void AccountingPeriod_Load(object sender, EventArgs e)
         {
+            sqLiteConnection1.ConnectionString = myConfig.connstr;
             getAcntPeriod();
 
         }

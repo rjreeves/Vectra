@@ -46,3 +46,42 @@ C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Debug\Vectra.ar.exe.licenses
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Debug\Vectra.ar.exe
 C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\Vectra\Vectra\obj\Debug\Vectra.ar.pdb
+C:\Private\Vectra\Vectra\bin\Debug\Vectra.ar.exe.config
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.ar.exe
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.ar.pdb
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.ar.csprojResolveAssemblyReference.cache
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.AboutBox1.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.AccountingPeriod.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.AdjustmentEdit.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.Adjustments.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.ATBReportForm.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.BetterDialog.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.Configuration.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.CurrentTransaction.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.CustomerReportForm.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.CustomerTransactionReportForm.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.dbase.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.EndOfWeek.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.ExceptionForm.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.InvoiceEdit.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.CustomerEdit.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.CustomerInterface.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.Debtors.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.Frame.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.Home.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.InvoiceNew.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.Backup.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.ReceiptAndAdjReportForm.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.ReceiptEdit.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.Receipts.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.Orders.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.prodTypes.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.ProductReportForm.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.Products.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.Properties.Resources.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.SalesProdReportForm.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.SalesSummaryReportForm.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.StatementReportForm.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.Test.resources
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.ar.csproj.GenerateResource.Cache
+C:\Private\Vectra\Vectra\obj\Debug\Vectra.ar.exe.licenses
