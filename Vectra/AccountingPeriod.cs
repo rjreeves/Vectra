@@ -31,6 +31,7 @@ namespace Vectra
             sqLiteCommand1.Connection = sqLiteConnection1;
             sqLiteConnection1.Open();
             sqLiteCommand1.ExecuteNonQuery();
+            sqLiteConnection1.Close();
             getAcntPeriod();
         }
 
@@ -70,6 +71,9 @@ namespace Vectra
                                             where invoice_number = t_src_id and t_week_id > (acnt_period - 3)
                                             group by  Date(t_timestamp), t_week_id";
             string sqlcmd = String.Format(cmd, "Entry Date","Accounting Period", "Invoices");
+
+            sqLiteConnection1.Open();
+
             SQLiteDataAdapter da = new SQLiteDataAdapter(sqlcmd.ToString(), sqLiteConnection1);
 
             DataTable dt = new DataTable();           
@@ -81,11 +85,13 @@ namespace Vectra
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
             dataGridView1.Width = dataGridView1.Columns[0].Width + dataGridView1.Columns[1].Width + dataGridView1.Columns[2].Width + 5;
             dataGridView1.ReadOnly = true;
+            sqLiteConnection1.Close();
 
         }
 
         private DateTime getFridaysDate(Int32 weekNo)
         {
+            
             SQLiteCommand sqLiteCommand1 = new SQLiteCommand();
             sqLiteCommand1.CommandText = String.Format(@"select t_date from acnt_period a 
                                            where a.t_week_id = '{0}'
@@ -93,7 +99,9 @@ namespace Vectra
             sqLiteCommand1.CommandType = CommandType.Text;
             sqLiteCommand1.Connection = sqLiteConnection1;
             sqLiteConnection1.Open();
-            return DateTime.Parse(sqLiteCommand1.ExecuteScalar().ToString());
+            DateTime myTime = DateTime.Parse(sqLiteCommand1.ExecuteScalar().ToString());
+            sqLiteConnection1.Close();
+            return myTime;
         }
 
 
