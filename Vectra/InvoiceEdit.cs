@@ -18,7 +18,7 @@ namespace Vectra
 
         public static int custPos;
         ToolTip tp1 = new ToolTip();
-        DataRowView drvInvoice;
+        public DataRowView drvInvoice;
         DataRowView drvCustomer;
         public InvoiceEdit(object item, object invoice)
         {
@@ -38,9 +38,8 @@ namespace Vectra
         }
 
 
-
         private void iNVOICE_HEADERBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
+        {  
             DataView dvn = new DataView(dataSet2.invoice_items);
             foreach (DataRowView r in dvn)
             {
@@ -48,8 +47,7 @@ namespace Vectra
                 {
                     r.Row.Delete();
                 }
-            }
-                       
+            }                       
 
             doTotal();
 
@@ -74,6 +72,9 @@ namespace Vectra
             DataRowView dv = (DataRowView)this.iNVOICE_HEADERBindingSource.Current;
 
             string cmd = @"update customer_trans set t_amount = {0}, t_unpaid = {0}, t_week_id = '{4}', t_src_dckt_id = '{5}', t_date = '{6}' where t_type = '{1}' and t_cust_id = {2} and t_src_id = {3}";
+
+
+            this.sqLiteConnection1.ConnectionString = myConfig.connstr;
 
             this.sqLiteConnection1.Open();
             this.sqLiteCommand1.CommandText =

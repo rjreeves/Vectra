@@ -37,10 +37,10 @@
             System.Windows.Forms.Label text_fully_paidLabel;
             System.Windows.Forms.Label invoice_unpaidLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InvoiceEdit));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.iNVOICE_HEADERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet2 = new Vectra.DataSet2();
             this.iNVOICE_HEADERBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
@@ -245,7 +245,7 @@
             // 
             this.toolStripLabel1.ForeColor = System.Drawing.Color.Red;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(129, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(133, 22);
             this.toolStripLabel1.Text = "**     Invoice Locked    **";
             // 
             // invoice_numberTextBox
@@ -355,8 +355,8 @@
             // 
             // invoice_itemsDataGridView
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.invoice_itemsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.invoice_itemsDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.invoice_itemsDataGridView.AutoGenerateColumns = false;
             this.invoice_itemsDataGridView.CausesValidation = false;
             this.invoice_itemsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -376,12 +376,12 @@
             this.invoice_itemsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.invoice_itemsDataGridView.Size = new System.Drawing.Size(780, 241);
             this.invoice_itemsDataGridView.TabIndex = 3;
-            this.invoice_itemsDataGridView.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.invoice_itemsDataGridView_CellParsing);
-            this.invoice_itemsDataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.invoice_itemsDataGridView_RowsAdded);
             this.invoice_itemsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.invoice_itemsDataGridView_CellClick);
-            this.invoice_itemsDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.invoice_itemsDataGridView_DataError);
-            this.invoice_itemsDataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.invoice_itemsDataGridView_KeyDown);
             this.invoice_itemsDataGridView.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.invoice_itemsDataGridView_CellClick);
+            this.invoice_itemsDataGridView.CellParsing += new System.Windows.Forms.DataGridViewCellParsingEventHandler(this.invoice_itemsDataGridView_CellParsing);
+            this.invoice_itemsDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.invoice_itemsDataGridView_DataError);
+            this.invoice_itemsDataGridView.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.invoice_itemsDataGridView_RowsAdded);
+            this.invoice_itemsDataGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.invoice_itemsDataGridView_KeyDown);
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -423,10 +423,10 @@
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "rate";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn6.HeaderText = "Rate";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -434,10 +434,10 @@
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "gst_value";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "C2";
-            dataGridViewCellStyle7.NullValue = null;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn7.HeaderText = "GST";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
@@ -445,10 +445,10 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "amount";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "C2";
-            dataGridViewCellStyle8.NullValue = null;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn8.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
@@ -606,6 +606,7 @@
             this.tableAdapterManager.ProductSalesReportTableAdapter = null;
             this.tableAdapterManager.ProductSalesSummaryTableAdapter = null;
             this.tableAdapterManager.productsTableAdapter = this.productsTableAdapter;
+            this.tableAdapterManager.SalesSummary1TableAdapter = null;
             this.tableAdapterManager.sqlite_sequenceTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Vectra.DataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
