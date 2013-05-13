@@ -1,6 +1,20 @@
 Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
 Connect: "Data Source="C:\Vectra\Data\PROD.db3";"
 Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: select t_date from acnt_period a, configuration b 
+                                           where b.acnt_period = a.t_week_id 
+                                           and t_Day_of_week = 6;
+Execute: select t_date from acnt_period a, configuration b 
+                                           where b.acnt_period = a.t_week_id 
+                                           and t_Day_of_week = 6;
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Connect: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Select acnt_period from configuration
+Execute: Select acnt_period from configuration
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Connect: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
 Prepare: Select acnt_period from configuration
 Execute: Select acnt_period from configuration
 Prepare: select t_date from acnt_period a, configuration b 
@@ -98,82 +112,4 @@ Execute: SELECT     cust_id, name_address_1, name_address_2, name_address_3, nam
                       avg_payment, open_bal
 FROM         customer
 ORDER BY name_address_1
-Close connection
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
-FROM         customer_trans
-Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
-FROM         customer_trans
-Close connection
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Prepare: SELECT type_id, "desc" FROM "main".product_type
-Execute: SELECT type_id, "desc" FROM "main".product_type
-Close connection
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Prepare: SELECT prod_id, "desc", percent_carcass, type_id, gst FROM "main".products
-Execute: SELECT prod_id, "desc", percent_carcass, type_id, gst FROM "main".products
-Close connection
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Prepare: SELECT invoice_number, line_number, prod_id, qty, weight, rate, gst_value, amount, qty_rate FROM invoice_items
-Execute: SELECT invoice_number, line_number, prod_id, qty, weight, rate, gst_value, amount, qty_rate FROM invoice_items
-Close connection
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Prepare: SELECT     cust_id, name_address_1, name_address_2, name_address_3, name_address_4, pcode, phone, contact_name, abn, credit_rating, notes, dunning, 
-                      avg_payment, open_bal
-FROM         customer
-ORDER BY name_address_1
-Execute: SELECT     cust_id, name_address_1, name_address_2, name_address_3, name_address_4, pcode, phone, contact_name, abn, credit_rating, notes, dunning, 
-                      avg_payment, open_bal
-FROM         customer
-ORDER BY name_address_1
-Close connection
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Prepare: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
-Execute: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
-Close connection
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Prepare: BEGIN DEFERRED
-Execute: BEGIN DEFERRED
-Prepare: UPDATE "main"."INVOICE_HEADER" SET "invoice_number" = $1, "cust_id" = $2, "docket_number" = $3, "notes" = $4, "text_fully_paid" = $5, "invoice_amount" = $6, "invoice_unpaid" = $7, "invoice_locked" = $8, "recent_payment" = $9, "invoice_date" = $10, "sort_date" = $11 WHERE (("invoice_number" = $12) AND (($13 = 1 AND "cust_id" IS NULL) OR ("cust_id" = $14)) AND (($15 = 1 AND "docket_number" IS NULL) OR ("docket_number" = $16)) AND (($17 = 1 AND "notes" IS NULL) OR ("notes" = $18)) AND (($19 = 1 AND "text_fully_paid" IS NULL) OR ("text_fully_paid" = $20)) AND (($21 = 1 AND "invoice_amount" IS NULL) OR ("invoice_amount" = $22)) AND (($23 = 1 AND "invoice_unpaid" IS NULL) OR ("invoice_unpaid" = $24)) AND (($25 = 1 AND "invoice_locked" IS NULL) OR ("invoice_locked" = $26)) AND (($27 = 1 AND "recent_payment" IS NULL) OR ("recent_payment" = $28)) AND (($29 = 1 AND "invoice_date" IS NULL) OR ("invoice_date" = $30)) AND (($31 = 1 AND "sort_date" IS NULL) OR ("sort_date" = $32)))
-Execute: UPDATE "main"."INVOICE_HEADER" SET "invoice_number" = $1, "cust_id" = $2, "docket_number" = $3, "notes" = $4, "text_fully_paid" = $5, "invoice_amount" = $6, "invoice_unpaid" = $7, "invoice_locked" = $8, "recent_payment" = $9, "invoice_date" = $10, "sort_date" = $11 WHERE (("invoice_number" = $12) AND (($13 = 1 AND "cust_id" IS NULL) OR ("cust_id" = $14)) AND (($15 = 1 AND "docket_number" IS NULL) OR ("docket_number" = $16)) AND (($17 = 1 AND "notes" IS NULL) OR ("notes" = $18)) AND (($19 = 1 AND "text_fully_paid" IS NULL) OR ("text_fully_paid" = $20)) AND (($21 = 1 AND "invoice_amount" IS NULL) OR ("invoice_amount" = $22)) AND (($23 = 1 AND "invoice_unpaid" IS NULL) OR ("invoice_unpaid" = $24)) AND (($25 = 1 AND "invoice_locked" IS NULL) OR ("invoice_locked" = $26)) AND (($27 = 1 AND "recent_payment" IS NULL) OR ("recent_payment" = $28)) AND (($29 = 1 AND "invoice_date" IS NULL) OR ("invoice_date" = $30)) AND (($31 = 1 AND "sort_date" IS NULL) OR ("sort_date" = $32)))
-Prepare: UPDATE    invoice_items
-SET              prod_id = $1, qty = $2, weight = $3, rate = $4, gst_value = $5, amount = $6
-WHERE     (invoice_number = $7) AND (line_number = $8)
-Execute: UPDATE    invoice_items
-SET              prod_id = $1, qty = $2, weight = $3, rate = $4, gst_value = $5, amount = $6
-WHERE     (invoice_number = $7) AND (line_number = $8)
-Commit
-Prepare: COMMIT
-Execute: COMMIT
-Close connection
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Prepare: SELECT     acnt_period
-FROM         configuration
-Execute: SELECT     acnt_period
-FROM         configuration
-Close connection
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Prepare: update customer_trans set t_amount = 25, t_unpaid = 25, t_week_id = '201319', t_src_dckt_id = '', t_date = '07/05/2013' where t_type = 'Invoice' and t_cust_id = 561 and t_src_id = 1003
-Execute: update customer_trans set t_amount = 25, t_unpaid = 25, t_week_id = '201319', t_src_dckt_id = '', t_date = '07/05/2013' where t_type = 'Invoice' and t_cust_id = 561 and t_src_id = 1003
-Close connection
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
-FROM         customer_trans
-Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
-FROM         customer_trans
-Close connection
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
-Prepare: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
-Execute: SELECT invoice_number, cust_id, docket_number, notes, text_fully_paid, invoice_amount, invoice_unpaid, invoice_locked, recent_payment, invoice_date, sort_date FROM INVOICE_HEADER
 Close connection

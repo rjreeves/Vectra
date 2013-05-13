@@ -70,8 +70,8 @@ namespace Vectra
                      
             sqLiteMonitor1.IsActive = true;            
             sqLiteMonitor1.TraceEvent += new Devart.Common.MonitorEventHandler(this.monitor_TraceEvent);
-            logFile = new StreamWriter("vectra.log");
-           
+            logFile = new StreamWriter("vectra.log");           
+            this.toolStripStatusLabel1.Text = String.Format("Accounting Period ending {0} ({1})", getFridaysDate().ToString("dd-MMM-yyyy"), getCurrentAcntPeriod());
             Form f = new Home();
             activateForm(f, FormWindowState.Normal, FormStartPosition.Manual);
         }
@@ -89,6 +89,34 @@ namespace Vectra
                 }
             }
         }
+
+
+        public string getCurrentAcntPeriod()
+        {
+            SQLiteConnection sqlCon = new SQLiteConnection();
+            sqlCon.ConnectionString = myConfig.connstr;
+            SQLiteCommand sqLiteCommand1 = new SQLiteCommand();
+            sqLiteCommand1.CommandText = @"Select acnt_period from configuration";
+            sqLiteCommand1.CommandType = CommandType.Text;
+            sqLiteCommand1.Connection = sqlCon;
+            sqlCon.Open();
+            return sqLiteCommand1.ExecuteScalar().ToString();
+        }
+
+        private DateTime getFridaysDate()
+        {
+            SQLiteConnection sqlCon = new SQLiteConnection();
+            sqlCon.ConnectionString = myConfig.connstr;
+            SQLiteCommand sqLiteCommand1 = new SQLiteCommand();
+            sqLiteCommand1.CommandText = @"select t_date from acnt_period a, configuration b 
+                                           where b.acnt_period = a.t_week_id 
+                                           and t_Day_of_week = 6;";
+            sqLiteCommand1.CommandType = CommandType.Text;
+            sqLiteCommand1.Connection = sqlCon;
+            sqlCon.Open();
+            return DateTime.Parse(sqLiteCommand1.ExecuteScalar().ToString());
+        }
+
 
         //Menus
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
