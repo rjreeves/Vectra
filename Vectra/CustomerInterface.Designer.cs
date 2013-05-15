@@ -92,6 +92,7 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.btnDelete = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.iNVOICE_RECIEPTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerTableAdapter = new Vectra.DataSet2TableAdapters.customerTableAdapter();
             this.tableAdapterManager = new Vectra.DataSet2TableAdapters.TableAdapterManager();
@@ -99,7 +100,6 @@
             this.debtors_summaryTableAdapter = new Vectra.DataSet2TableAdapters.debtors_summaryTableAdapter();
             this.iNVOICE_HEADERTableAdapter = new Vectra.DataSet2TableAdapters.INVOICE_HEADERTableAdapter();
             this.iNVOICE_RECIEPTSTableAdapter = new Vectra.DataSet2TableAdapters.INVOICE_RECIEPTSTableAdapter();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             open_balLabel = new System.Windows.Forms.Label();
             curAmtLabel = new System.Windows.Forms.Label();
             days7Label = new System.Windows.Forms.Label();
@@ -520,8 +520,8 @@
             this.customerDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.customerDataGridView.Size = new System.Drawing.Size(849, 200);
             this.customerDataGridView.TabIndex = 0;
-            this.customerDataGridView.Sorted += new System.EventHandler(this.customerDataGridView_Sorted);
             this.customerDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerDataGridView_CellContentClick);
+            this.customerDataGridView.Sorted += new System.EventHandler(this.customerDataGridView_Sorted);
             this.customerDataGridView.Click += new System.EventHandler(this.customerDataGridView_Click);
             // 
             // custidDataGridViewTextBoxColumn
@@ -716,6 +716,16 @@
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(91, 22);
+            this.toolStripButton1.Text = "Current Invoices";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // iNVOICE_RECIEPTSBindingSource
             // 
             this.iNVOICE_RECIEPTSBindingSource.DataMember = "INVOICE_RECIEPTS";
@@ -764,16 +774,6 @@
             // iNVOICE_RECIEPTSTableAdapter
             // 
             this.iNVOICE_RECIEPTSTableAdapter.ClearBeforeFill = true;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(91, 22);
-            this.toolStripButton1.Text = "Current Invoices";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // CustomerInterface
             // 

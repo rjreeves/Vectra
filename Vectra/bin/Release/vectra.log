@@ -69,6 +69,43 @@ Execute: select t_week_id from acnt_period
                     where date('now','localtime') = t_date;
 Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
 Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: Select acnt_period, StatementDate from configuration
+Execute: Select acnt_period, StatementDate from configuration
+Prepare: select t_date from acnt_period a 
+                                           where a.t_week_id = '201314'
+                                           and t_Day_of_week = 6;
+Execute: select t_date from acnt_period a 
+                                           where a.t_week_id = '201314'
+                                           and t_Day_of_week = 6;
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: select t_week_id from acnt_period where t_date = date('now','localtime')
+Execute: select t_week_id from acnt_period where t_date = date('now','localtime')
+Prepare: select t_date from acnt_period a 
+                                           where a.t_week_id = '201320'
+                                           and t_Day_of_week = 6;
+Execute: select t_date from acnt_period a 
+                                           where a.t_week_id = '201320'
+                                           and t_Day_of_week = 6;
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: select strftime('%d-%m-%Y',t_timestamp) as 'Entry Date', 
+                                            t_week_id as 'Accounting Period' ,count(*) as 'Invoices'
+                                            from invoice_header h, customer_trans t, configuration c
+                                            where invoice_number = t_src_id and t_week_id > (acnt_period - 3)
+                                            group by  Date(t_timestamp), t_week_id
+Execute: select strftime('%d-%m-%Y',t_timestamp) as 'Entry Date', 
+                                            t_week_id as 'Accounting Period' ,count(*) as 'Invoices'
+                                            from invoice_header h, customer_trans t, configuration c
+                                            where invoice_number = t_src_id and t_week_id > (acnt_period - 3)
+                                            group by  Date(t_timestamp), t_week_id
+Close connection
+Prepare: Select acnt_period from configuration
+Execute: Select acnt_period from configuration
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
 Prepare: SELECT     cust_id, name_address_1, name_address_2, name_address_3, name_address_4, pcode, phone, contact_name, abn, credit_rating, notes, dunning, 
                       avg_payment, open_bal
 FROM         customer
@@ -112,4 +149,23 @@ Execute: SELECT     cust_id, name_address_1, name_address_2, name_address_3, nam
                       avg_payment, open_bal
 FROM         customer
 ORDER BY name_address_1
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     recpt_number, amount, recpt_date, invoice_number, cust_id, invoice_key
+FROM         INVOICE_RECIEPTS
+Execute: SELECT     recpt_number, amount, recpt_date, invoice_number, cust_id, invoice_key
+FROM         INVOICE_RECIEPTS
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT cust_id, docket_number, invoice_amount, invoice_date, invoice_locked, invoice_number, invoice_unpaid, notes, recent_payment, text_fully_paid, sort_date FROM INVOICE_HEADER WHERE (cust_id = $1) AND (invoice_unpaid > 0) ORDER BY sort_date
+Execute: SELECT cust_id, docket_number, invoice_amount, invoice_date, invoice_locked, invoice_number, invoice_unpaid, notes, recent_payment, text_fully_paid, sort_date FROM INVOICE_HEADER WHERE (cust_id = $1) AND (invoice_unpaid > 0) ORDER BY sort_date
+Close connection
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Open connection: "Data Source="C:\Vectra\Data\PROD.db3";"
+Prepare: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
+Execute: SELECT     t_id, t_type, t_cust_id, t_src_id, t_ref_id, t_date, t_note, t_timestamp, t_amount, t_unpaid, t_no_print, t_finished, t_week_id, t_src_dckt_id
+FROM         customer_trans
 Close connection

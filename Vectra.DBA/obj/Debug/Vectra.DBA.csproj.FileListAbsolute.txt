@@ -20,3 +20,15 @@ C:\Private\Vectra\Vectra.DBA\obj\Debug\Vectra.DBA.Receipts.resources
 C:\Private\Vectra\Vectra.DBA\obj\Debug\Vectra.DBA.csproj.GenerateResource.Cache
 C:\Private\Vectra\Vectra.DBA\obj\Debug\Vectra.DBA.exe
 C:\Private\Vectra\Vectra.DBA\obj\Debug\Vectra.DBA.pdb
+d:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Debug\ResolveAssemblyReference.cache
+d:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Debug\Vectra.DBA.Invoicing.resources
+d:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Debug\Vectra.DBA.Main.resources
+d:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Debug\Vectra.DBA.Properties.Resources.resources
+d:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Debug\Vectra.DBA.Receipts.resources
+d:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Debug\ResGen.read.1.tlog
+d:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Debug\ResGen.write.1.tlog
+d:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\bin\Debug\Vectra.DBA.exe.config
+d:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\bin\Debug\Vectra.DBA.exe
+d:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\bin\Debug\Vectra.DBA.pdb
+d:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Debug\Vectra.DBA.exe
+d:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Debug\Vectra.DBA.pdb

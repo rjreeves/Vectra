@@ -277,6 +277,7 @@
             this.t_amountTextBox.Name = "t_amountTextBox";
             this.t_amountTextBox.Size = new System.Drawing.Size(139, 13);
             this.t_amountTextBox.TabIndex = 2;
+            this.t_amountTextBox.Leave += new System.EventHandler(this.t_amountTextBox_Leave);
             // 
             // t_src_idTextBox
             // 
@@ -480,7 +481,7 @@
             // sqLiteConnection1
             // 
             this.sqLiteConnection1.ConnectionString = "Data Source=\"C:\\Documents and Settings\\All Users\\Application Data\\Vectra\\Data\\PRO" +
-                "D.db3\";";
+    "D.db3\";";
             this.sqLiteConnection1.Name = "sqLiteConnection1";
             this.sqLiteConnection1.Owner = this;
             // 

@@ -31,3 +31,15 @@ C:\Private\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.Receipts.resources
 C:\Private\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.csproj.GenerateResource.Cache
 C:\Private\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.exe
 C:\Private\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.pdb
+D:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\bin\Release\Vectra.DBA.exe.config
+D:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\bin\Release\Vectra.DBA.exe
+D:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\bin\Release\Vectra.DBA.pdb
+D:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Release\ResolveAssemblyReference.cache
+D:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.Invoicing.resources
+D:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.Main.resources
+D:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.Properties.Resources.resources
+D:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.Receipts.resources
+D:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Release\ResGen.read.1.tlog
+D:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Release\ResGen.write.1.tlog
+D:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.exe
+D:\Users\robert\Documents\GitHub\Vectra\Vectra.DBA\obj\Release\Vectra.DBA.pdb

@@ -67,6 +67,8 @@ namespace Vectra
             t_timestampDateTimePicker.Text = DateTime.Now.ToShortDateString();
             t_amountTextBox.Text = "0";
 
+            this.iNVOICE_HEADERDataGridView.AllowUserToAddRows = false;
+
             this.sqLiteConnection1.ConnectionString = da.Connection.ConnectionString;
                         
         }
@@ -383,10 +385,35 @@ namespace Vectra
 
         private void iNVOICE_HEADERDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow dr = new DataGridViewRow();
-            dr = iNVOICE_HEADERDataGridView.Rows[e.RowIndex];
-            dr.Cells["recent_payment"].Value = dr.Cells["Unpaid"].Value;
-            iNVOICE_HEADERDataGridView.BeginEdit(true);
+            {
+                DataGridViewRow dr = new DataGridViewRow();
+                dr = iNVOICE_HEADERDataGridView.Rows[e.RowIndex];
+
+                try
+                {
+                    //Ensure the hint value is the lesser of the unallocated amount and the unpaid invoce amount.                   
+                    if (Decimal.Compare(unallocated_bal, Convert.ToDecimal(dr.Cells["Unpaid"].Value)) == 1)
+                    {
+                        dr.Cells["recent_payment"].Value = dr.Cells["Unpaid"].Value;
+                    }
+                    else
+                    {
+                        dr.Cells["recent_payment"].Value = unallocated_bal;
+                    }
+
+                    iNVOICE_HEADERDataGridView.BeginEdit(true);
+                    btnSubTotal_Click(sender, e);
+                }
+                catch
+                {
+                    ;
+                }
+            }
+        }
+
+        private void t_amountTextBox_Leave(object sender, EventArgs e)
+        {
+            btnSubTotal_Click(sender, e);
         }
 
 

@@ -80,11 +80,11 @@ namespace Vectra
                     r.Cells[3].Value, r.Cells[4].Value));              
             }
 
-            if (recptAmount != allocatedAmount) // only add back to unallocated if there is some!
+            if (recptAmount != allocatedAmount) // only adj back to unallocated if there is some!
             {  
                 doSQL(String.Format(
-                    "update customer set open_bal = open_bal + {0} where cust_id = '{1}'",
-                    Decimal.Add(recptAmount, allocatedAmount), t["t_cust_id"]));
+                    "update customer set open_bal = open_bal - {0} where cust_id = '{1}'",
+                    Decimal.Subtract(recptAmount, allocatedAmount), t["t_cust_id"]));
             }
 
             doSQL( String.Format("Delete from customer_trans where t_id = '{0}'",t["t_id"].ToString()));

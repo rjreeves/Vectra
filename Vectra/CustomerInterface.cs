@@ -122,7 +122,8 @@ namespace Vectra
             this.iNVOICE_HEADERTableAdapter.Fill(this.dataSet2.INVOICE_HEADER);            
             this.toolStrip2.Focus();
             searchValue.Focus();
-            searchValue.SelectAll();            
+            searchValue.SelectAll();
+            this.Refresh();
         }
 
 

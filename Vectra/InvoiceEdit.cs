@@ -167,11 +167,7 @@ namespace Vectra
                 //this.SubTotalTextBox.Text = String.Format("{0:C}", subTotal);
                 this.totalTextBox.Text = String.Format("{0:C}", total);
                 this.gstTextBox.Text = String.Format("{0:C}", gst);
-
-                
-
-                Refresh();
-                                                  
+                Refresh();                       
              }
         }
 
