@@ -131,11 +131,6 @@ C:\Users\rreeves\Desktop\Vectra\Vectra\obj\Release\Vectra.ar.exe.licenses
 C:\Private\Vectra\Vectra\bin\Release\Vectra.ar.exe.config
 C:\Private\Vectra\Vectra\bin\Release\Vectra.ar.exe
 C:\Private\Vectra\Vectra\bin\Release\Vectra.ar.pdb
-C:\Private\Vectra\Vectra\bin\Release\Devart.Data.dll
-C:\Private\Vectra\Vectra\bin\Release\Devart.Data.SQLite.Design.dll
-C:\Private\Vectra\Vectra\bin\Release\Devart.Data.SQLite.dll
-C:\Private\Vectra\Vectra\bin\Release\Devart.Data.xml
-C:\Private\Vectra\Vectra\bin\Release\Devart.Data.SQLite.xml
 C:\Private\Vectra\Vectra\obj\Release\Vectra.ar.csprojResolveAssemblyReference.cache
 C:\Private\Vectra\Vectra\obj\Release\Vectra.AboutBox1.resources
 C:\Private\Vectra\Vectra\obj\Release\Vectra.AccountingPeriod.resources
@@ -171,7 +166,6 @@ C:\Private\Vectra\Vectra\obj\Release\Vectra.SalesSummaryReportForm.resources
 C:\Private\Vectra\Vectra\obj\Release\Vectra.StatementReportForm.resources
 C:\Private\Vectra\Vectra\obj\Release\Vectra.Test.resources
 C:\Private\Vectra\Vectra\obj\Release\Vectra.ar.csproj.GenerateResource.Cache
-C:\Private\Vectra\Vectra\obj\Release\Vectra.ar.exe.licenses
 C:\Private\Vectra\Vectra\obj\Release\Vectra.ar.exe
 C:\Private\Vectra\Vectra\obj\Release\Vectra.ar.pdb
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\bin\Release\Vectra.ar.exe.config
@@ -218,3 +212,6 @@ d:\Users\robert\Documents\GitHub\Vectra\Vectra\bin\Release\Vectra.ar.exe
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\bin\Release\Vectra.ar.pdb
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\bin\Release\ZedGraph.dll
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\bin\Release\ZedGraph.xml
+C:\Private\Vectra\Vectra\bin\Release\Resources\licenses.licx
+C:\Private\Vectra\Vectra\bin\Release\ZedGraph.dll
+C:\Private\Vectra\Vectra\bin\Release\ZedGraph.xml

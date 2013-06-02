@@ -45,6 +45,8 @@
             System.Windows.Forms.Label open_balLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerEdit));
             this.cust_idTextBox = new System.Windows.Forms.TextBox();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet2 = new Vectra.DataSet2();
             this.name_address_1TextBox = new System.Windows.Forms.TextBox();
             this.name_address_2TextBox = new System.Windows.Forms.TextBox();
             this.name_address_3TextBox = new System.Windows.Forms.TextBox();
@@ -61,8 +63,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.open_balTextBox = new System.Windows.Forms.TextBox();
             this.btnDeleteCust = new System.Windows.Forms.Button();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet2 = new Vectra.DataSet2();
             this.customerTableAdapter = new Vectra.DataSet2TableAdapters.customerTableAdapter();
             this.tableAdapterManager = new Vectra.DataSet2TableAdapters.TableAdapterManager();
             cust_idLabel = new System.Windows.Forms.Label();
@@ -202,13 +202,11 @@
             // open_balLabel
             // 
             open_balLabel.AutoSize = true;
-            open_balLabel.Enabled = false;
             open_balLabel.Location = new System.Drawing.Point(427, 239);
             open_balLabel.Name = "open_balLabel";
             open_balLabel.Size = new System.Drawing.Size(78, 13);
             open_balLabel.TabIndex = 30;
             open_balLabel.Text = "Open Balance:";
-            open_balLabel.Visible = false;
             // 
             // cust_idTextBox
             // 
@@ -218,6 +216,16 @@
             this.cust_idTextBox.Size = new System.Drawing.Size(100, 20);
             this.cust_idTextBox.TabIndex = 0;
             this.cust_idTextBox.Leave += new System.EventHandler(this.cust_idTextBox_Leave);
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "customer";
+            this.customerBindingSource.DataSource = this.dataSet2;
+            // 
+            // dataSet2
+            // 
+            this.dataSet2.DataSetName = "DataSet2";
+            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // name_address_1TextBox
             // 
@@ -341,12 +349,10 @@
             // open_balTextBox
             // 
             this.open_balTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customerBindingSource, "open_bal", true));
-            this.open_balTextBox.Enabled = false;
             this.open_balTextBox.Location = new System.Drawing.Point(509, 235);
             this.open_balTextBox.Name = "open_balTextBox";
             this.open_balTextBox.Size = new System.Drawing.Size(100, 20);
             this.open_balTextBox.TabIndex = 31;
-            this.open_balTextBox.Visible = false;
             // 
             // btnDeleteCust
             // 
@@ -356,16 +362,6 @@
             this.btnDeleteCust.TabIndex = 32;
             this.btnDeleteCust.Text = "Customer Delete";
             this.btnDeleteCust.UseVisualStyleBackColor = true;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataMember = "customer";
-            this.customerBindingSource.DataSource = this.dataSet2;
-            // 
-            // dataSet2
-            // 
-            this.dataSet2.DataSetName = "DataSet2";
-            this.dataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // customerTableAdapter
             // 
@@ -391,6 +387,7 @@
             this.tableAdapterManager.ProductSalesReportTableAdapter = null;
             this.tableAdapterManager.ProductSalesSummaryTableAdapter = null;
             this.tableAdapterManager.productsTableAdapter = null;
+            this.tableAdapterManager.SalesSummary1TableAdapter = null;
             this.tableAdapterManager.sqlite_sequenceTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Vectra.DataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -433,8 +430,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomerEdit";
             this.Text = "Customer Edit";
-            this.Load += new System.EventHandler(this.CustomerEdit_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CustomerEdit_FormClosing);
+            this.Load += new System.EventHandler(this.CustomerEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet2)).EndInit();
             this.ResumeLayout(false);

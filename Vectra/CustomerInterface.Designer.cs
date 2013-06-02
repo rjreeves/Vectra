@@ -267,7 +267,7 @@
             this.ttypeDataGridViewTextBoxColumn.HeaderText = "Transaction Type";
             this.ttypeDataGridViewTextBoxColumn.Name = "ttypeDataGridViewTextBoxColumn";
             this.ttypeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ttypeDataGridViewTextBoxColumn.Width = 106;
+            this.ttypeDataGridViewTextBoxColumn.Width = 105;
             // 
             // tdateDataGridViewTextBoxColumn
             // 
@@ -521,6 +521,7 @@
             this.customerDataGridView.Size = new System.Drawing.Size(849, 200);
             this.customerDataGridView.TabIndex = 0;
             this.customerDataGridView.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerDataGridView_CellContentClick);
+            this.customerDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerDataGridView_CellContentClick);
             this.customerDataGridView.Sorted += new System.EventHandler(this.customerDataGridView_Sorted);
             this.customerDataGridView.Click += new System.EventHandler(this.customerDataGridView_Click);
             // 
@@ -549,7 +550,7 @@
             this.nameaddress4DataGridViewTextBoxColumn.HeaderText = "Address (4)";
             this.nameaddress4DataGridViewTextBoxColumn.Name = "nameaddress4DataGridViewTextBoxColumn";
             this.nameaddress4DataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameaddress4DataGridViewTextBoxColumn.Width = 79;
+            this.nameaddress4DataGridViewTextBoxColumn.Width = 78;
             // 
             // pcodeDataGridViewTextBoxColumn
             // 
@@ -596,20 +597,20 @@
             this.editToolStripMenuItem,
             this.deleteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(117, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 48);
             this.contextMenuStrip1.Text = "Edit";
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -653,7 +654,7 @@
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(81, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(90, 22);
             this.toolStripButton2.Text = "New Customer";
             this.toolStripButton2.Click += new System.EventHandler(this.AddNewCustomer);
             // 
@@ -667,7 +668,7 @@
             this.btnInvoicing.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.btnInvoicing.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnInvoicing.Name = "btnInvoicing";
-            this.btnInvoicing.Size = new System.Drawing.Size(77, 22);
+            this.btnInvoicing.Size = new System.Drawing.Size(83, 22);
             this.btnInvoicing.Text = "Invoicing (F5)";
             this.btnInvoicing.Click += new System.EventHandler(this.btnInvoicing_Click);
             // 
@@ -681,7 +682,7 @@
             this.btnReceipt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.btnReceipt.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnReceipt.Name = "btnReceipt";
-            this.btnReceipt.Size = new System.Drawing.Size(70, 22);
+            this.btnReceipt.Size = new System.Drawing.Size(73, 22);
             this.btnReceipt.Text = "Receipt (F6)";
             this.btnReceipt.Click += new System.EventHandler(this.btnReceipt_Click);
             // 
@@ -695,7 +696,7 @@
             this.btnAdjustment.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.btnAdjustment.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdjustment.Name = "btnAdjustment";
-            this.btnAdjustment.Size = new System.Drawing.Size(94, 22);
+            this.btnAdjustment.Size = new System.Drawing.Size(101, 22);
             this.btnAdjustment.Text = "Adjustments (F7)";
             this.btnAdjustment.Click += new System.EventHandler(this.btnAdjustment_Click);
             // 
@@ -707,7 +708,7 @@
             // btnDelete
             // 
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(87, 22);
+            this.btnDelete.Size = new System.Drawing.Size(95, 22);
             this.btnDelete.Text = "Delete Customer";
             this.btnDelete.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
@@ -722,7 +723,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(91, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(97, 22);
             this.toolStripButton1.Text = "Current Invoices";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 

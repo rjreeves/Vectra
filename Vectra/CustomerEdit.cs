@@ -31,9 +31,7 @@ namespace Vectra
 
         private void CustomerEdit_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSet2.customer' table. You can move, or remove it, as needed.
-           // this.customerTableAdapter.Fill(this.dataSet2.customer);
-            open_balTextBox.Text = "0";
+            ; 
         }
 
         private void CustomerEdit_FormClosing(object sender, FormClosingEventArgs e)

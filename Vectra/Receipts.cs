@@ -185,12 +185,17 @@ namespace Vectra
             if (payAmt > 0)
             {
                 // Allocate additional payment to general bucket
+                DataRowView drvCustomer = (DataRowView)this.customerBindingSource.Current;
+                drvCustomer["open_bal"] = Decimal.Add(Convert.ToDecimal(drvCustomer["open_bal"]), payAmt );
+
+                /*
                 string cmd = string.Format("update customer set open_bal = open_bal + {0} where cust_id = {1}",
                              payAmt.ToString(), cust_idTextBox.Text.ToString());
 
                 SQLiteCommand sqlCmd = new SQLiteCommand(cmd, sqLiteConnection1);
 
                 sqlCmd.ExecuteNonQuery();
+                 * */
 
             }
 
@@ -385,6 +390,7 @@ namespace Vectra
 
         private void iNVOICE_HEADERDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex != -1)
             {
                 DataGridViewRow dr = new DataGridViewRow();
                 dr = iNVOICE_HEADERDataGridView.Rows[e.RowIndex];

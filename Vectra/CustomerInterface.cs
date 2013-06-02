@@ -206,7 +206,9 @@ namespace Vectra
                     f.ShowDialog();                                       
                 }
                 this.customer_transTableAdapter.Fill(this.dataSet2.customer_trans);
-                this.iNVOICE_HEADERTableAdapter.Fill(this.dataSet2.INVOICE_HEADER);                
+                this.iNVOICE_HEADERTableAdapter.Fill(this.dataSet2.INVOICE_HEADER);
+                this.customerBindingSource.ResetCurrentItem();
+                
             }                     
             this.toolStrip2.Focus();
             searchValue.Focus();

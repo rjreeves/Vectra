@@ -81,10 +81,10 @@ namespace Vectra
             }
 
             if (recptAmount != allocatedAmount) // only adj back to unallocated if there is some!
-            {  
-                doSQL(String.Format(
-                    "update customer set open_bal = open_bal - {0} where cust_id = '{1}'",
-                    Decimal.Subtract(recptAmount, allocatedAmount), t["t_cust_id"]));
+            {
+
+                drvCustomer["open_bal"] = Convert.ToDecimal(drvCustomer["open_bal"]) - Decimal.Subtract(recptAmount, allocatedAmount);
+
             }
 
             doSQL( String.Format("Delete from customer_trans where t_id = '{0}'",t["t_id"].ToString()));
