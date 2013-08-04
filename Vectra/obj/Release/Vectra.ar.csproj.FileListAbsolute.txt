@@ -171,7 +171,6 @@ C:\Private\Vectra\Vectra\obj\Release\Vectra.ar.pdb
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\bin\Release\Vectra.ar.exe.config
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\obj\Release\Vectra.ar.exe
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\obj\Release\Vectra.ar.pdb
-d:\Users\robert\Documents\GitHub\Vectra\Vectra\obj\Release\ResolveAssemblyReference.cache
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\obj\Release\Vectra.AboutBox1.resources
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\obj\Release\Vectra.AccountingPeriod.resources
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\obj\Release\Vectra.AdjustmentEdit.resources
@@ -205,8 +204,6 @@ d:\Users\robert\Documents\GitHub\Vectra\Vectra\obj\Release\Vectra.SalesProdRepor
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\obj\Release\Vectra.SalesSummaryReportForm.resources
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\obj\Release\Vectra.StatementReportForm.resources
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\obj\Release\Vectra.Test.resources
-d:\Users\robert\Documents\GitHub\Vectra\Vectra\obj\Release\ResGen.read.1.tlog
-d:\Users\robert\Documents\GitHub\Vectra\Vectra\obj\Release\ResGen.write.1.tlog
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\bin\Release\Resources\licenses.licx
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\bin\Release\Vectra.ar.exe
 d:\Users\robert\Documents\GitHub\Vectra\Vectra\bin\Release\Vectra.ar.pdb
@@ -215,3 +212,5 @@ d:\Users\robert\Documents\GitHub\Vectra\Vectra\bin\Release\ZedGraph.xml
 C:\Private\Vectra\Vectra\bin\Release\Resources\licenses.licx
 C:\Private\Vectra\Vectra\bin\Release\ZedGraph.dll
 C:\Private\Vectra\Vectra\bin\Release\ZedGraph.xml
+D:\Users\robert\Documents\GitHub\Vectra\Vectra\obj\Release\Vectra.ar.csprojResolveAssemblyReference.cache
+D:\Users\robert\Documents\GitHub\Vectra\Vectra\obj\Release\Vectra.ar.csproj.GenerateResource.Cache

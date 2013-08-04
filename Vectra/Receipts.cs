@@ -149,7 +149,8 @@ namespace Vectra
                             {
                                 newRow.Row["invoice_number"] = drv.Row["docket_number"];
                             }
-                            newRow.Row["recpt_date"] = t_dateDateTimePicker.Value.ToShortDateString();
+                            DateTime dd = t_dateDateTimePicker.Value;
+                            newRow.Row["recpt_date"] = dd.ToShortDateString();
                             newRow.Row["amount"] = amt;
                             newRow.EndEdit();
 

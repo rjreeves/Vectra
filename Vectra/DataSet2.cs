@@ -2,6 +2,10 @@
     
     
     public partial class DataSet2 {
+        partial class INVOICE_RECIEPTSDataTable
+        {
+        }
+    
         partial class PaymentAdjustRptDataTable
         {
         }
