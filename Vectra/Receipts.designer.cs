@@ -35,14 +35,13 @@
             System.Windows.Forms.Label t_ref_idLabel;
             System.Windows.Forms.Label t_dateLabel;
             System.Windows.Forms.Label t_noteLabel;
-            System.Windows.Forms.Label t_timestampLabel;
             System.Windows.Forms.Label t_amountLabel;
             System.Windows.Forms.Label t_src_idLabel;
             System.Windows.Forms.Label name_address_1Label;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.t_idTextBox = new System.Windows.Forms.TextBox();
             this.customer_transBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet2 = new Vectra.DataSet2();
@@ -51,7 +50,6 @@
             this.t_ref_idTextBox = new System.Windows.Forms.TextBox();
             this.t_dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.t_noteTextBox = new System.Windows.Forms.TextBox();
-            this.t_timestampDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.t_amountTextBox = new System.Windows.Forms.TextBox();
             this.t_src_idTextBox = new System.Windows.Forms.TextBox();
             this.name_address_1TextBox = new System.Windows.Forms.TextBox();
@@ -87,7 +85,6 @@
             t_ref_idLabel = new System.Windows.Forms.Label();
             t_dateLabel = new System.Windows.Forms.Label();
             t_noteLabel = new System.Windows.Forms.Label();
-            t_timestampLabel = new System.Windows.Forms.Label();
             t_amountLabel = new System.Windows.Forms.Label();
             t_src_idLabel = new System.Windows.Forms.Label();
             name_address_1Label = new System.Windows.Forms.Label();
@@ -152,16 +149,6 @@
             t_noteLabel.Size = new System.Drawing.Size(33, 13);
             t_noteLabel.TabIndex = 12;
             t_noteLabel.Text = "Note:";
-            // 
-            // t_timestampLabel
-            // 
-            t_timestampLabel.AutoSize = true;
-            t_timestampLabel.Location = new System.Drawing.Point(364, 310);
-            t_timestampLabel.Name = "t_timestampLabel";
-            t_timestampLabel.Size = new System.Drawing.Size(27, 13);
-            t_timestampLabel.TabIndex = 14;
-            t_timestampLabel.Text = "Dud";
-            t_timestampLabel.Visible = false;
             // 
             // t_amountLabel
             // 
@@ -257,18 +244,6 @@
             this.t_noteTextBox.TabIndex = 8;
             this.t_noteTextBox.Leave += new System.EventHandler(this.t_noteTextBox_Leave);
             // 
-            // t_timestampDateTimePicker
-            // 
-            this.t_timestampDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.customer_transBindingSource, "t_timestamp", true));
-            this.t_timestampDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.customer_transBindingSource, "t_timestamp", true));
-            this.t_timestampDateTimePicker.Enabled = false;
-            this.t_timestampDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.t_timestampDateTimePicker.Location = new System.Drawing.Point(397, 305);
-            this.t_timestampDateTimePicker.Name = "t_timestampDateTimePicker";
-            this.t_timestampDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.t_timestampDateTimePicker.TabIndex = 15;
-            this.t_timestampDateTimePicker.Visible = false;
-            // 
             // t_amountTextBox
             // 
             this.t_amountTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -345,9 +320,9 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "invoice_number";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.NullValue = null;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.NullValue = null;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn1.HeaderText = "Invoice Number";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -355,9 +330,9 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "invoice_date";
-            dataGridViewCellStyle2.Format = "d";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Format = "d";
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn2.HeaderText = "Invoice Date";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -393,10 +368,10 @@
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "invoice_amount";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "C2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewTextBoxColumn7.HeaderText = "Invoice Amount";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
@@ -404,10 +379,10 @@
             // unpaid
             // 
             this.unpaid.DataPropertyName = "invoice_unpaid";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.unpaid.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "C2";
+            dataGridViewCellStyle8.NullValue = null;
+            this.unpaid.DefaultCellStyle = dataGridViewCellStyle8;
             this.unpaid.HeaderText = "Invoice Unpaid";
             this.unpaid.Name = "unpaid";
             this.unpaid.ReadOnly = true;
@@ -562,8 +537,6 @@
             this.Controls.Add(this.t_dateDateTimePicker);
             this.Controls.Add(t_noteLabel);
             this.Controls.Add(this.t_noteTextBox);
-            this.Controls.Add(t_timestampLabel);
-            this.Controls.Add(this.t_timestampDateTimePicker);
             this.Controls.Add(t_amountLabel);
             this.Controls.Add(this.t_amountTextBox);
             this.Controls.Add(t_src_idLabel);
@@ -595,7 +568,6 @@
         private System.Windows.Forms.TextBox t_ref_idTextBox;
         private System.Windows.Forms.DateTimePicker t_dateDateTimePicker;
         private System.Windows.Forms.TextBox t_noteTextBox;
-        private System.Windows.Forms.DateTimePicker t_timestampDateTimePicker;
         private System.Windows.Forms.TextBox t_amountTextBox;
         private System.Windows.Forms.TextBox t_src_idTextBox;
         private Vectra.DataSet2TableAdapters.customerTableAdapter customerTableAdapter;

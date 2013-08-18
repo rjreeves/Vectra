@@ -8,14 +8,33 @@ using System.Text;
 using System.Windows.Forms;
 using Devart.Data;
 using Devart.Data.SQLite;
-using Vectra.DataSet2TableAdapters;
-
 
 
 namespace Vectra
 {
     public partial class Receipts : Form
     {
+
+        string UpdateCustTranswithNewUnpaid = @"update customer_trans 
+                    set t_unpaid = (select invoice_unpaid from invoice_header 
+								where customer_trans.t_cust_id = invoice_header.cust_id 
+								and customer_trans.t_src_id = invoice_header.invoice_number
+								and customer_trans.t_type = 'Invoice'
+								and invoice_header.recent_payment <> 0
+								)
+                    where
+	                    exists(
+		                    select * 
+		                    from invoice_header
+		                    where invoice_header.cust_id = customer_trans.t_cust_id 
+		                    and  customer_trans.t_src_id = invoice_header.invoice_number
+		                    and customer_trans.t_type = 'Invoice'
+		                    and invoice_header.recent_payment <> 0
+		                    )";
+
+
+        
+
         public Decimal unallocated_bal = 0;
         
         public bool errorFlag = false;
@@ -36,16 +55,37 @@ namespace Vectra
 
         private void Receipts_Load(object sender, EventArgs e)
         {
-            this.iNVOICE_HEADERTableAdapter.FillBy2(this.dataSet2.INVOICE_HEADER, Convert.ToInt64(this.cust_idTextBox.Text));
+            this.iNVOICE_RECIEPTSBindingSource.Filter = string.Format("cust_id = {0}", this.cust_idTextBox.Text);
+            this.iNVOICE_RECIEPTSTableAdapter.Fill(this.dataSet2.INVOICE_RECIEPTS);
 
-            //this.iNVOICE_RECIEPTSBindingSource.Filter = string.Format("cust_id = {0}", this.cust_idTextBox.Text);
-            //this.iNVOICE_RECIEPTSTableAdapter.Fill(this.dataSet2.INVOICE_RECIEPTS);                       
+            this.iNVOICE_HEADERTableAdapter.FillBy2(this.dataSet2.INVOICE_HEADER, Convert.ToInt64(this.cust_idTextBox.Text));            
             //this.customer_transTableAdapter.Fill(this.dataSet2.customer_trans);
+            this.customer_transBindingSource.AddNew();
+            t_cust_idTextBox.Text = cust_idTextBox.Text;
+            t_typeTextBox.Text = "Payment";
+            t_dateDateTimePicker.Text = DateTime.Now.ToShortDateString();
+            t_timestampDateTimePicker.Text = DateTime.Now.ToShortDateString();
+            t_amountTextBox.Text = "0";
 
             this.iNVOICE_HEADERDataGridView.AllowUserToAddRows = false;
+
+            this.sqLiteConnection1.ConnectionString = da.Connection.ConnectionString;
+                        
         }
 
+        private void doSQL(string sqlText)
+        {
+            SQLiteCommand sqLiteCommand1 = new SQLiteCommand();
+            sqLiteCommand1.CommandText = sqlText;
 
+            sqLiteCommand1.CommandType = CommandType.Text;
+            sqLiteCommand1.Connection = sqLiteConnection1;
+            sqLiteConnection1.Open();
+            sqLiteCommand1.ExecuteNonQuery();
+            sqLiteConnection1.Close();
+
+        }
+        
 
         private void btnApply_Click(object sender, EventArgs e)  //AUTO APPLY
         {   
@@ -55,35 +95,119 @@ namespace Vectra
                 BetterDialog.ShowDialog("Reciept error", "Amount must be greater than ZERO", "Try again",null, "OK",Properties.Resources.books.ToBitmap());
                 return;
             }
-
-            t_cust_idTextBox.Text = cust_idTextBox.Text;
-            t_typeTextBox.Text = "Payment";
-            t_dateDateTimePicker.Text = DateTime.Now.ToShortDateString();           
-            t_amountTextBox.Text = "0";
-
-            DataView dv = this.dataSet2.INVOICE_HEADER;
-
-            string dd = "18/8/2013";
-
             
-            Int16 maxId = Convert.ToInt16(customer_transTableAdapter.GetMaxID());
-
-            
-
-            customer_transTableAdapter.Insert(maxId + 1, "Payment", Convert.ToInt16(this.cust_idTextBox.Text), 1, 1, dd, "", DateTime.Now, Convert.ToDouble(payAmt), 0, "", 1, 1, "dckt");
-            
-            
-            
-           
-            /*
             Decimal x;
             
             DataView dv = new DataView(dataSet2.INVOICE_HEADER);
             dv.RowFilter = string.Format("CUST_ID = {0} AND invoice_unpaid <> 0", this.cust_idTextBox.Text);
             dv.Sort = ("sort_date ASC");
-            */
-            //this.tableAdapterManager.UpdateAll(this.dataSet2);
-            //Close();
+
+           // sqLiteConnection1.Open();
+
+            if (dv.Count == 0)     // No invoices to attach payment to.
+            {
+                DataRowView r = (DataRowView)this.customer_transBindingSource.Current;
+                r["t_week_id"] = da.getCurrentAcntPeriod();
+                r["t_timestamp"] = DateTime.Now.ToShortDateString();
+                //r["t_amount"] = (Double)r["t_amount"] * -1;  // Store Payment in Cust_Trans as -ve.
+                this.customer_transBindingSource.EndEdit();
+
+                /*
+                DataRowView newRow = (DataRowView)iNVOICE_RECIEPTSBindingSource.AddNew();
+                newRow.Row["cust_id"] = this.cust_idTextBox.Text;
+                newRow.Row["recpt_number"] = t_idTextBox.Text;
+                newRow.Row["invoice_number"] = 0;
+                DateTime dd = t_dateDateTimePicker.Value;
+                newRow.Row["recpt_date"] = dd.ToShortDateString();
+                newRow.Row["amount"] = payAmt;
+                newRow.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.dataSet2);
+                */
+            }
+            else
+            {
+                Decimal amt = 0;
+                foreach (DataRowView drv in dv)
+                {
+                    if (payAmt > 0)
+                    {
+                        x = Convert.ToDecimal(drv["invoice_unpaid"].ToString());
+                        if (x > 0)
+                        {
+                            amt = 0;
+                            if (x <= payAmt)
+                            {
+                                drv["invoice_unpaid"] = 0;
+                                drv["invoice_locked"] = "1";
+                                payAmt = Decimal.Subtract(payAmt, x);
+                                amt = x;
+                            }
+                            else
+                            {
+                                x = Decimal.Subtract(x, payAmt);
+                                amt = payAmt;
+                                drv["invoice_unpaid"] = x;
+                                drv["invoice_locked"] = "1";
+                                payAmt = 0;
+                            }
+                            iNVOICE_HEADERBindingSource.EndEdit();
+
+                            DataRowView newRow = (DataRowView)iNVOICE_RECIEPTSBindingSource.AddNew();
+                            newRow.Row["cust_id"] = this.cust_idTextBox.Text;
+                            newRow.Row["recpt_number"] = t_idTextBox.Text;
+                            newRow.Row["invoice_key"] = drv.Row["invoice_number"];
+                            
+                            Int64 invoiceNumber;
+                            if (drv.Row["docket_number"].ToString().Length == 0)
+                            {
+                                newRow.Row["invoice_number"] = drv.Row["invoice_number"];
+                                invoiceNumber = (Int64)drv.Row["invoice_number"]; 
+                            }
+                            else
+                            {
+                                newRow.Row["invoice_number"] = drv.Row["docket_number"];
+                                invoiceNumber = (Int64)drv.Row["docket_number"];
+                            }    
+                         
+                            DateTime dd = t_dateDateTimePicker.Value;
+                            newRow.Row["recpt_date"] = dd.ToShortDateString();
+                            newRow.Row["amount"] = amt;
+                            newRow.EndEdit();
+
+                            DataRowView r = (DataRowView)this.customer_transBindingSource.Current;
+                            r["t_week_id"] = da.getCurrentAcntPeriod();
+                            if (drv.Row["docket_number"].ToString().Length == 0)
+                            {
+                                t_ref_idTextBox.Text = drv.Row["invoice_number"].ToString();
+                            }
+                            else
+                            {
+                                t_ref_idTextBox.Text = drv.Row["docket_number"].ToString();
+                            }
+                            r["t_timestamp"] = DateTime.Now.ToShortDateString();
+                            r["t_unpaid"] = drv.Row["invoice_unpaid"];
+
+                            //r["t_amount"] = (Double)r["t_amount"] * -1;  // Store Payment in Cust_Trans as -ve.
+                            this.customer_transBindingSource.EndEdit();
+
+                           
+                            //customer_transTableAdapter.UpdateUnpaidInvoice(amt, invoiceNumber);
+
+                            this.tableAdapterManager.UpdateAll(this.dataSet2);
+                        }
+                    }
+                }
+            }
+           
+
+            if (payAmt > 0)
+            {
+                // Allocate additional payment to general bucket
+                DataRowView drvCustomer = (DataRowView)this.customerBindingSource.Current;
+                drvCustomer["open_bal"] = Decimal.Add(Convert.ToDecimal(drvCustomer["open_bal"]), payAmt );
+                this.tableAdapterManager.UpdateAll(this.dataSet2);
+            }
+            Close();
         }
 
         private void t_idTextBox_Leave(object sender, EventArgs e)
@@ -98,7 +222,6 @@ namespace Vectra
 
         private void button1_Click(object sender, EventArgs e)   // Simple APPLY
         {
-            /*
             Decimal paymntAllocations = 0;
 
             this.iNVOICE_HEADERBindingSource.EndEdit();
@@ -176,7 +299,6 @@ namespace Vectra
                 }
                 
             }
-             */
             Close();
         }
 
